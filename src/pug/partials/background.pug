@@ -1,0 +1,14 @@
+.background
+	.background__center.center
+		.background__head.js-background-head(style="background-image: url('img/content/bg-profile.jpg');")
+			.background__btns
+				button.button-stroke.button-small.background__button.js-background-load 
+					+i('edit')
+					span Edit cover
+			.background__file
+				input(type="file")
+				.background__wrap
+					+i('upload-file')
+					.background__info Drag and drop your photo here
+					.background__text or click to browse
+				button.button-small.background__button.js-background-save Save photo

@@ -1,0 +1,270 @@
+---
+title: Fleet
+classHeader: header_border
+classCars: active
+---
+extends layouts/layout
+block content
+	.section-mb64.product
+		.product__center.center
+			.control
+				a.button-stroke.button-small.control__button(href="cars-category.html")
+					+i('arrow-left')
+					span Go home
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Home
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="cars.html") Cars
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="cars-category.html") London
+					li.breadcrumbs__item Kings Cross
+			.product__head
+				.product__box
+					h2.product__title.h2 BMW i1 – 2021
+					.product__line
+						.product__avatar
+							img(src="img/content/avatar-1.jpg" alt="Avatar")
+						.product__rating
+							+i('star')
+							.product__number 4.8
+							.product__reviews (256 reviews)
+						.product__options
+							.product__option
+								+i('user')
+								| Best driver
+							.product__option
+								+i('flag')
+								| London - Kings Cross
+				+actions
+			.gallery
+				.gallery__list.gallery__list_cars
+					.gallery__preview
+						a.gallery__view(href="img/content/photo-3.1.jpg" data-fancybox="gallery" data-caption="BMW i1 – 2021")
+							img(src="img/content/photo-3.1.jpg" alt="Gallery")
+						a.button-white.button-small.gallery__button(href="full-photo-grid.html")
+							+i('image')
+							span Show all photos
+					a.gallery__preview(href="img/content/photo-3.2.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-3.2.jpg" alt="Gallery")
+					a.gallery__preview(href="img/content/photo-3.3.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-3.3.jpg" alt="Gallery")
+					a.gallery__preview(href="img/content/photo-3.4.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-3.4.jpg" alt="Gallery")
+					a.gallery__preview(href="img/content/photo-3.5.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-3.5.jpg" alt="Gallery")
+	.section.description
+		.description__center.center
+			.description__wrapper
+				h4.description__title.h4 Car details
+				.description__profile
+					span Car owner
+					.description__avatar
+						img(src="img/content/avatar.jpg" alt="Avatar")
+					.description__name Colleen Jast
+				.description__list
+					.description__item
+						.description__icon(style="border-color: #92A5EF;")
+							+i('stopwatch')
+						| Put your car feature
+					.description__item
+						.description__icon(style="border-color: #8BC5E5;")
+							+i('car')
+						| Put your car feature
+					.description__item
+						.description__icon(style="border-color: #FA8F54;")
+							+i('user')
+						| Up to 6 people
+					.description__item
+						.description__icon(style="border-color: #58C27D;")
+							+i('candlesticks')
+						| Put your car feature
+				.description__group
+					.description__section
+						.description__content
+							h4 Activity
+							p The best 16 passenger small group, intimate and unique, Milford Sound tour. 
+							p Travel in unparalleled style and comfort in a premium Mercedes van equipped with large panoramic windows, leather reclining seats, quirky on board videos, free wifi and complimentary bottled water.  
+							p From your accommodation enjoy the stunning scenic drive.
+					.description__section
+						.description__content
+							h4 Full protection
+							p The best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.
+						.description__content.description__content_hide
+							p Travel in unparalleled style and comfort in a premium Mercedes van equipped with large panoramic windows, leather reclining seats, quirky on board videos, free wifi and complimentary bottled water.  
+							p From your accommodation enjoy the stunning scenic drive.
+							p The best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.
+						button.button-stroke.button-small.description__button Show more
+			.receipt
+				.receipt__head
+					.receipt__details
+						.receipt__cost
+							.receipt__old $620
+							.receipt__actual $500
+							.receipt__note /day
+						.receipt__rating
+							+i('star')
+							.receipt__number 4.8
+							.receipt__reviews (256 reviews)
+					.receipt__avatar
+						img(src="img/content/avatar.jpg" alt="Avatar")
+						.receipt__check
+							+i('check')
+				.receipt__description
+					.receipt__item
+						.receipt__icon
+							+i('calendar')
+						.receipt__box
+							.receipt__category Date
+							.receipt__subtitle May 15, 2021 - May 18, 2021
+				.receipt__stage Extras
+				.receipt__settings
+					.receipt__setting
+						.receipt__wrap
+							.receipt__subtitle Payable on collection
+							.receipt__content If you reserve any of these extras, you'll pay for them at the counter.
+						.counter.js-counter(data-min="0")
+							button.counter__button.js-counter-button.js-counter-minus.disabled(type="button")
+								+i('minus')
+							.counter__value.js-counter-value
+							button.counter__button.js-counter-button.js-counter-plus(type="button")
+								+i('plus')
+							input.js-counter-input.js-counter-result.js-counter-babies(type="hidden")
+					.receipt__setting
+						.receipt__wrap
+							.receipt__subtitle Child seat
+							.receipt__content $50
+						.counter.js-counter(data-min="0")
+							button.counter__button.js-counter-button.js-counter-minus.disabled(type="button")
+								+i('minus')
+							.counter__value.js-counter-value
+							button.counter__button.js-counter-button.js-counter-plus(type="button")
+								+i('plus')
+							input.js-counter-input.js-counter-result.js-counter-babies(type="hidden")
+				.receipt__stage Price details
+				.receipt__table
+					.receipt__line
+						.receipt__cell $500 x 3 days
+						.receipt__cell $1500
+					.receipt__line
+						.receipt__cell 10% campaign discount
+						.receipt__cell -$150
+					.receipt__line
+						.receipt__cell 1 child seat
+						.receipt__cell $50
+					.receipt__line
+						.receipt__cell Service fee
+						.receipt__cell $110
+					.receipt__line
+						.receipt__cell Total
+						.receipt__cell $1460
+				.receipt__foot
+					.receipt__free
+						+i('coin')
+						| Free cancellation until 3:00 PM on May 15, 2021
+					a.button.receipt__button(href="cars-checkout.html")
+						span Rent this car
+						+i('bag')
+	.section.comments
+		.comments__center.center
+			.profile
+				.profile__head
+					.profile__line
+						.profile__avatar
+							img(src="img/content/avatar.jpg" alt="Avatar")
+							.profile__check
+								+i('check')
+						.profile__details
+							.profile__man Zoe towne
+							.profile__rating
+								+i('star')
+								.profile__number 4.8
+								.profile__reviews (256 reviews)
+				.profile__body
+					.profile__parameters
+						.profile__parameter
+							+i('home')
+							| Superhost
+						.profile__parameter
+							+i('star-outline')
+							| 256 reviews
+					.profile__info Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built
+					a.profile__site(href="https://ui8.net" target="_blank")
+						+i('globe')
+						| https://ui8.net
+					.profile__control
+						a.button-stroke.button-small.profile__button(href="message-center.html") Contact
+						.actions.js-actions
+							.actions__item.actions__item_share.js-actions-item
+								button.button-circle-stroke.button-small.actions__button.js-actions-button
+									+i('share')
+								.actions__body.actions__body_up.js-actions-body
+									.actions__title Share link to this page
+									.actions__list.share-btn(data-url="https://ui8.net")
+										a.actions__link.btn-twitter(data-id="tw")
+											span
+												+i('twitter')
+										a.actions__link.btn-facebook(data-id="fb")
+											span
+												+i('facebook')
+					.profile__socials
+						a.profile__social(href="https://twitter.com/ui8" target="_blank")
+							+i('twitter')
+						a.profile__social(href="https://www.instagram.com/ui8net/" target="_blank")
+							+i('instagram')
+						a.profile__social(href="https://www.facebook.com/ui8.net/" target="_blank")
+							+i('facebook')
+					.profile__note Member since Mar 15, 2021
+					button.profile__report
+						+i('flag')
+						| Report this property
+			include partials/comment
+	.section.browse
+		.browse__center.center
+			.browse__inner
+				.browse__head
+					h2.browse__title.h2 Explore nearby
+					.browse__info.info Let’s go on an adventure
+				.browse__wrapper
+					.browse__slider.js-slider-browse
+						mixin slide(srcSet, src, category, subtitle, content)
+							a.browse__card(href="stays-category.html")
+								.browse__preview
+									img(srcSet=`${srcSet} 2x` src=src alt="Card")
+									.status-black.browse__category=category
+								.browse__subtitle=subtitle 
+								.browse__content
+									+i('home')
+									=content
+						+slide("img/content/browse-pic-6.jpg", "img/content/browse-pic-6@2x.jpg", "20% off", "Nature house", "650,111")
+						+slide("img/content/browse-pic-7.jpg", "img/content/browse-pic-7@2x.jpg", "from $230", "Nature house", "664,423")
+						+slide("img/content/browse-pic-8.jpg", "img/content/browse-pic-8@2x.jpg", "30% off", "Nature house", "324,565")
+						+slide("img/content/browse-pic-9.jpg", "img/content/browse-pic-9@2x.jpg", "from $190", "Nature house", "443,879")
+						+slide("img/content/browse-pic-1.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Nature house", "650,111")
+						+slide("img/content/browse-pic-2.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Nature house", "664,423")
+						+slide("img/content/browse-pic-3.jpg", "img/content/browse-pic-3@2x.jpg", "20% off", "Nature house", "324,565")
+	.section.categories
+		.categories__center.center
+			.categories__inner
+				.categories__head
+					h2.categories__title.h2 Recommended pickup locations
+					.categories__info.info A lot of amazing experiences 🏝
+				.categories__wrapper
+					.categories__slider.js-slider-categories
+						mixin item(url, counter, icon, subtitle, content)
+							a.categories__item(href=url)
+								.status.categories__counter=counter
+								.categories__icon
+									+i(icon)
+								.categories__subtitle=subtitle 
+								.categories__content=content
+						+item("cars-category-2.html", "256", "car", "South Virgilland", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "33", "car", "Purdyhaven", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "123", "car", "Port Jarrett", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "43", "car", "New Kristian", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "73", "car", "Demetrisfort", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "11", "car", "South Virgilland", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "56", "car", "Purdyhaven", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "33", "car", "Port Jarrett", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "123", "car", "New Kristian", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "43", "car", "Demetrisfort", "From Rs. 1,461 per day")

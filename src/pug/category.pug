@@ -1,0 +1,87 @@
+---
+title: Fleet
+classThingsToDo: active
+classBest: section best
+bestTitle: Best tour guide
+bestInfo: 100+ tour guides
+---
+extends layouts/layout
+block content
+	.section-mb80.main.main_tasks-category
+		.main__center.center
+			.main__preview
+				img(src="img/content/main-pic-6.jpg" alt="Main")
+				.main__wrap
+					h1.main__title.hero South Island
+					.main__info.info 🇳🇿 New Zealand
+			.panel.panel_tasks-category
+				.panel__background
+				.panel__body
+					.panel__row
+						+location("location_small", "location", "Location", false)
+						+datesingle("datepicker_small", "MMM DD, YYYY", true, "calendar", "Date", false)
+						+travelers("travelers_small", "user", false)
+						button.panel__search
+							+i('search')
+	.section.catalog
+		.sorting
+			.sorting__center.center
+				.control
+					a.button-stroke.button-small.control__button(href="things-to-do.html")
+						+i('arrow-left')
+						span Go home
+					ul.breadcrumbs
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="index.html") Home
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="index.html") Stays
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="stays-category.html") New Zealand
+						li.breadcrumbs__item South Island
+				.sorting__body
+					.sorting__box
+						h2.sorting__title.h2 128 experiences
+						.sorting__line
+							.sorting__sale up to 25% off
+							.sorting__details May 1 - 14, 2 guests
+					.sorting__location
+						button.button-stroke.sorting__button.js-sorting-button
+							span Show map
+							+i('arrow-bottom')
+						.sorting__map.js-sorting-map
+							iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63817.0803287881!2d168.63234961382247!3d-45.04173987887954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d51df1d7a8de5f%3A0x500ef868479a600!2z0JrRg9C40L3RgdGC0LDRg9C9LCDQndC-0LLQsNGPINCX0LXQu9Cw0L3QtNC40Y8!5e0!3m2!1sru!2sua!4v1624887132616!5m2!1sru!2sua" width="600" height="450" loading="lazy")
+				.sorting__foot
+					.nav
+						a.nav__link.active(href="#") Sightseeing
+						a.nav__link(href="#") Transportation activities
+						a.nav__link(href="#") Art and culture
+						a.nav__link(href="#") City tour
+					.sorting__select.tablet-show
+						select.select
+							option Sightseeing
+							option Transportation activities
+							option Art and culture
+							option City tour
+					.sorting__select
+						select.select
+							option Time of day
+							option Time of week
+		.catalog__body
+			.catalog__center.center
+				.catalog__cards
+					+card("product.html", "img/content/card-pic-10@2x.jpg", "img/content/card-pic-10.jpg", "category-blue card__category", "best selling", "Premium milford sound tour ex Queenstown", "$356", "$267", "clock", "12 hours", "user", "Up to 10 people", "$200 total", "4.8", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-1.jpg", "card_row")
+					+card("product.html", "img/content/card-pic-11@2x.jpg", "img/content/card-pic-11.jpg", false, "", "Premium milford sound tour ex Queenstown", "$234", "$123", "clock", "12 hours", "user", "Up to 10 people", "$123 total", "4.9", "15", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-2.jpg", "card_row")
+					+card("product.html", "img/content/card-pic-12@2x.jpg", "img/content/card-pic-12.jpg", false, "", "Premium milford sound tour ex Queenstown", "$456", "$401", "clock", "12 hours", "user", "Up to 10 people", "$456 total", "4.8", "125", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-3.jpg", "card_row")
+					+card("product.html", "img/content/card-pic-13@2x.jpg", "img/content/card-pic-13.jpg", "category-blue card__category", "best selling", "Premium milford sound tour ex Queenstown", "$356", "$267", "clock", "12 hours", "user", "Up to 10 people", "$200 total", "4.8", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-1.jpg", "card_row")
+					+card("product.html", "img/content/card-pic-14@2x.jpg", "img/content/card-pic-14.jpg", false, "", "Premium milford sound tour ex Queenstown", "$234", "$123", "clock", "12 hours", "user", "Up to 10 people", "$123 total", "4.9", "15", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-2.jpg", "card_row")
+					+card("product.html", "img/content/card-pic-15@2x.jpg", "img/content/card-pic-15.jpg", false, "", "Premium milford sound tour ex Queenstown", "$456", "$401", "clock", "12 hours", "user", "Up to 10 people", "$456 total", "4.8", "125", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-3.jpg", "card_row")
+					+card("product.html", "img/content/card-pic-16@2x.jpg", "img/content/card-pic-16.jpg", "category-blue card__category", "best selling", "Premium milford sound tour ex Queenstown", "$356", "$267", "clock", "12 hours", "user", "Up to 10 people", "$200 total", "4.8", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-1.jpg", "card_row")
+					+card("product.html", "img/content/card-pic-17@2x.jpg", "img/content/card-pic-17.jpg", false, "", "Premium milford sound tour ex Queenstown", "$234", "$123", "clock", "12 hours", "user", "Up to 10 people", "$123 total", "4.9", "15", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-2.jpg", "card_row")
+					+card("product.html", "img/content/card-pic-18@2x.jpg", "img/content/card-pic-18.jpg", false, "", "Premium milford sound tour ex Queenstown", "$456", "$401", "clock", "12 hours", "user", "Up to 10 people", "$456 total", "4.8", "125", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-3.jpg", "card_row")
+					+card("product.html", "img/content/card-pic-19@2x.jpg", "img/content/card-pic-19.jpg", false, "", "Premium milford sound tour ex Queenstown", "$456", "$401", "clock", "12 hours", "user", "Up to 10 people", "$456 total", "4.8", "125", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-3.jpg", "card_row")
+				.catalog__btns
+					button.button-stroke.catalog__button
+						+loader
+						span Show more
+	include partials/best
+	include partials/newsletter

@@ -1,0 +1,302 @@
+mixin i(name)
+	svg.icon(class='icon-' + name)
+		use(xlink:href='#icon-' + name)
+
+mixin loader(classLoader)
+	.loader(class=classLoader)
+
+mixin subscription(typeInput, name, placeholder, icon, classSubscription)
+	form.subscription(class=classSubscription)
+		input.subscription__input(type=typeInput name=name placeholder=placeholder required)
+		button.subscription__btn
+			+i(icon)
+
+mixin theme
+	label.theme.js-theme
+		input.theme__input(type="checkbox")
+		span.theme__inner
+			span.theme__box
+
+mixin location(classLocation, icon, placeholder, description)
+	.location.js-location(class=classLocation)
+		.location__head.js-location-head
+			.location__icon
+				+i(icon)
+			input.location__input.js-location-input(type="text" name="location" autocomplete="off" placeholder=placeholder)
+			if description
+				.location__description=description
+			button.location__clear.js-location-clear
+				+i('close-circle') 
+		.location__body.js-location-body
+			.location__list
+				a.location__item.js-location-item(href='#') New York, NY
+				a.location__item.js-location-item(href='#') New York, Manhattan
+				a.location__item.js-location-item(href='#') New Zealand
+				a.location__item.js-location-item(href='#') New Smyrna Beach, FL
+				a.location__item.js-location-item(href='#') Newark, NJ
+
+mixin travelers(classTravelers, icon, description)
+	.travelers.js-travelers(class=classTravelers)
+		.travelers__head.js-travelers-head
+			.travelers__icon
+				+i(icon)
+			.travelers__content.js-travelers-content Travelers
+			if description
+				.travelers__description=description
+		.travelers__body.js-travelers-body
+			.travelers__item
+				.travelers__details
+					.travelers__category Adults
+					.travelers__text Ages 13 or above
+				.counter.js-counter(data-min="0")
+					button.counter__button.js-counter-button.js-counter-minus.disabled(type="button")
+						+i('minus-circle')
+					.counter__value.js-counter-value
+					button.counter__button.js-counter-button.js-counter-plus(type="button")
+						+i('plus-circle')
+					input.js-counter-input.js-counter-result.js-counter-adults(type="hidden")
+			.travelers__item
+				.travelers__details
+					.travelers__category Children
+					.travelers__text Ages 2 - 12
+				.counter.js-counter(data-min="0")
+					button.counter__button.js-counter-button.js-counter-minus.disabled(type="button")
+						+i('minus-circle')
+					.counter__value.js-counter-value
+					button.counter__button.js-counter-button.js-counter-plus(type="button")
+						+i('plus-circle')
+					input.js-counter-input.js-counter-result.js-counter-children(type="hidden")
+			.travelers__item
+				.travelers__details
+					.travelers__category Adults
+					.travelers__text Under 2
+				.counter.js-counter(data-min="0")
+					button.counter__button.js-counter-button.js-counter-minus.disabled(type="button")
+						+i('minus-circle')
+					.counter__value.js-counter-value
+					button.counter__button.js-counter-button.js-counter-plus(type="button")
+						+i('plus-circle')
+					input.js-counter-input.js-counter-result.js-counter-babies(type="hidden")
+
+mixin travelersCheckout
+	.travelers.travelers_down.js-travelers
+		.travelers__top
+			.travelers__label Guests
+			.travelers__value.js-travelers-content 1 guest
+			button.travelers__edit.js-travelers-head
+				+i('edit')
+		.travelers__body.js-travelers-body
+			.travelers__item
+				.travelers__details
+					.travelers__category Adults
+					.travelers__text Ages 13 or above
+				.counter.js-counter(data-min="1")
+					button.counter__button.js-counter-button.js-counter-minus.disabled(type="button")
+						+i('minus-circle')
+					.counter__value.js-counter-value
+					button.counter__button.js-counter-button.js-counter-plus(type="button")
+						+i('plus-circle')
+					input.js-counter-input.js-counter-result.js-counter-adults(type="hidden")
+			.travelers__item
+				.travelers__details
+					.travelers__category Children
+					.travelers__text Ages 2 - 12
+				.counter.js-counter(data-min="0")
+					button.counter__button.js-counter-button.js-counter-minus.disabled(type="button")
+						+i('minus-circle')
+					.counter__value.js-counter-value
+					button.counter__button.js-counter-button.js-counter-plus(type="button")
+						+i('plus-circle')
+					input.js-counter-input.js-counter-result.js-counter-children(type="hidden")
+			.travelers__item
+				.travelers__details
+					.travelers__category Adults
+					.travelers__text Under 2
+				.counter.js-counter(data-min="0")
+					button.counter__button.js-counter-button.js-counter-minus.disabled(type="button")
+						+i('minus-circle')
+					.counter__value.js-counter-value
+					button.counter__button.js-counter-button.js-counter-plus(type="button")
+						+i('plus-circle')
+					input.js-counter-input.js-counter-result.js-counter-babies(type="hidden")
+
+mixin guests
+	.guests.js-guests
+		.guests__head.js-guests-head
+			.guests__content.js-guests-content 1 guest
+			+i('arrow-down')
+		.guests__body.js-guests-body
+			.counter.js-counter(data-min="1")
+				button.counter__button.js-counter-button.js-counter-minus.disabled(type="button")
+					+i('minus')
+				.counter__value.js-counter-value
+				button.counter__button.js-counter-button.js-counter-plus(type="button")
+					+i('plus')
+				input.js-counter-input.js-counter-result.js-counter-quests(type="hidden")
+
+mixin daterange(classDateRange, formatDate, icon, placeholderFrom, placeholderTo, descriptionFrom, descriptionTo)
+	.datepicker.js-date-range(data-format=formatDate class=classDateRange data-container=".datepicker")
+		.datepicker__list
+			.datepicker__item
+				input.datepicker__input.js-date-from(type="text" placeholder=placeholderFrom readonly)
+				.datepicker__icon
+					+i(icon)
+				if descriptionFrom
+					.datepicker__description=descriptionFrom
+			.datepicker__item
+				input.datepicker__input.js-date-to(type="text" placeholder=placeholderTo readonly)
+				.datepicker__icon
+					+i(icon)
+				if descriptionTo
+					.datepicker__description=descriptionTo
+
+mixin datesingle(classDateSingle, formatDate, single, icon, placeholder, description)
+	.datepicker(class=classDateSingle)
+		.datepicker__item
+			input.datepicker__input.js-date-single(data-format=formatDate data-single=single data-container=".datepicker" type="text" placeholder=placeholder readonly)
+			.datepicker__icon
+				+i(icon)
+			if description
+				.datepicker__description=description
+
+mixin card(url, srcSet, src, classCategory, category, title, old, actual, icon1, option1, icon2, option2, cost, rating, reviews, comment, avatar, classCard)
+	a.card(href=url class=classCard)
+		.card__preview
+			img(srcSet=`${srcSet} 2x` src=src alt=title)
+			if category
+				div(class=classCategory)=category
+		.card__body
+			.card__line
+				.card__title=title
+				.card__price
+					.card__old=old
+					.card__actual=actual
+			.card__options
+				if option1
+					.card__option
+						+i(icon1)
+						=option1
+				if option2
+					.card__option
+						+i(icon2)
+						=option2
+			.card__foot
+				if comment
+					.card__comment
+						.card__avatar
+							img(src=avatar alt="Avatar")
+						.card__text=comment
+				.card__flex
+					.card__cost=cost
+					.card__rating
+						+i('star')
+						.card__number=rating
+						.card__reviews (
+							=reviews
+							|  reviews)
+
+mixin actions
+	.actions.js-actions
+		.actions__list
+			.actions__item.actions__item_map.js-actions-item
+				button.button-circle-stroke.button-small.actions__button.js-actions-button
+					+i('location')
+				.actions__body.js-actions-body
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63817.0803287881!2d168.63234961382247!3d-45.04173987887954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d51df1d7a8de5f%3A0x500ef868479a600!2z0JrRg9C40L3RgdGC0LDRg9C9LCDQndC-0LLQsNGPINCX0LXQu9Cw0L3QtNC40Y8!5e0!3m2!1sru!2sua!4v1624887132616!5m2!1sru!2sua" width="600" height="450")
+			.actions__item.actions__item_share.js-actions-item
+				button.button-circle-stroke.button-small.actions__button.js-actions-button
+					+i('share')
+				.actions__body.js-actions-body
+					.actions__title Share link to this page
+					.actions__list.share-btn(data-url="https://ui8.net")
+						a.actions__link.btn-twitter(data-id="tw")
+							span
+								+i('twitter')
+						a.actions__link.btn-facebook(data-id="fb")
+							span
+								+i('facebook')
+			.actions__item
+				button.button-circle-stroke.button-small.actions__favorite.js-actions-favorite
+					+i('heart')
+					+i('heart-fill')
+			.actions__item
+				a.button-circle-stroke.button-small.actions__button(href="stays-category.html")
+					+i('close')
+
+mixin checkbox(text, checked, counter)
+	label.checkbox
+		if checked
+			input.checkbox__input(type="checkbox" checked)
+		else
+			input.checkbox__input(type="checkbox")
+		span.checkbox__inner
+			span.checkbox__tick
+			if counter
+				span.checkbox__flex
+					span.checkbox__text=text
+					span.checkbox__counter=counter
+			else
+				span.checkbox__text=text
+
+mixin radio(text, name, checked)
+	label.radio
+		if checked
+			input.radio__input(type="radio" name=name checked)
+		else
+			input.radio__input(type="radio" name=name)
+		span.radio__inner
+			span.radio__tick
+			span.radio__text=text
+
+mixin switch(checked)
+	label.switch
+		if checked
+			input.switch__input(type="checkbox" checked)
+		else
+			input.switch__input(type="checkbox")
+		span.switch__inner
+			span.switch__box
+
+mixin flight(roundtrip)
+	.flight
+		.flight__wrap
+			.flight__item
+				.flight__logo
+					img(src="img/content/emirates.svg" alt="Emirates")
+				.flight__details
+					.flight__box
+						.flight__title AKL
+						.flight__time 6:45 AM
+					.flight__note nonstop
+					.flight__box
+						.flight__title SGN
+						.flight__time 9:45 AM
+			if roundtrip
+				.flight__item
+					.flight__logo
+						img(src="img/content/emirates.svg" alt="Emirates")
+					.flight__details
+						.flight__box
+							.flight__title SGN
+							.flight__time 12:45 AM
+						.flight__note nonstop
+						.flight__box
+							.flight__title AKL
+							.flight__time 3:45 AM
+		.flight__control
+			.flight__info
+				+i('tick')
+				| eDreams
+			button.button-stroke.flight__button
+				span.flight__price $3,256
+				span.flight__more
+					span View deal
+					+i('arrow-next')
+
+
+
+
+
+
+
+

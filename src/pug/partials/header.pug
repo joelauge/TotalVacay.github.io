@@ -1,0 +1,99 @@
+header.header.js-header(class=classHeader)
+	.header__center.center
+		a.header__logo(href="index.html")
+			img.some-icon(src="img/logo-dark.svg" alt="Fleet")
+			img.some-icon-dark(src="img/logo-light.svg" alt="Fleet")
+		.header__wrapper.js-header-wrapper
+			.header__item.header__item_dropdown.js-header-item
+				button.header__head.js-header-head Travelers
+					+i('arrow-down')
+				.header__body.js-header-body
+					.header__menu
+						a.header__link(href='index.html' class=classStays)
+							+i('comment')
+							| Stays
+						a.header__link(href='flights.html' class=classFlights)
+							+i('email')
+							| Flights
+						a.header__link(href='things-to-do.html' class=classThingsToDo)
+							+i('home')
+							| Things to do
+						a.header__link(href='cars.html' class=classCars)
+							+i('email')
+							| Cars
+			a.header__item(href="support.html" class=classSupport) Support
+			.header__item.header__item_language.js-header-item
+				button.header__head.js-header-head
+					+i('globe')
+					| Language
+				.header__body.js-header-body
+					.header__list
+						a.header__box.active(href="#")
+							.header__category English
+							.header__country United States
+						a.header__box(href="#")
+							.header__category Vietnamese
+							.header__country Vietnamese
+						a.header__box(href="#")
+							.header__category Français
+							.header__country Belgique
+						a.header__box(href="#")
+							.header__category Français
+							.header__country Canada
+			a.button.button-stroke.button-small.header__button(href="list-your-property.html" class=classListYourProperty) List your property
+		.header__item.header__item_notification.js-header-item
+			button.header__head.js-header-head.active
+				+i('notification')
+			.header__body.js-header-body
+				.header__title Notification
+				.header__notifications
+					a.header__notification(href="message-center.html")
+						.header__avatar
+							img(src="img/content/avatar-1.jpg" alt="Avatar")
+						.header__details
+							.header__subtitle Kohaku Tora
+							.header__content just sent you a message
+							.header__date 1 minute ago
+							.header__status(style="background-color: #3B71FE;")
+					a.header__notification(href="message-center.html")
+						.header__avatar
+							img(src="img/content/avatar-1.jpg" alt="Avatar")
+						.header__details
+							.header__subtitle Kohaku Tora
+							.header__content just sent you a message
+							.header__date 3 hours ago
+							.header__status(style="background-color: #3B71FE;")
+		a.header__login.js-popup-open(href="#popup-login" data-effect="mfp-zoom-in")
+			+i('user')
+		.header__item.header__item_user.js-header-item
+			button.header__head.js-header-head
+				img(src="img/content/avatar-2.jpg" alt="Avatar")
+			.header__body.js-header-body
+				.header__group
+					.header__menu
+						a.header__link(href='message-center.html' class=classMessages)
+							+i('comment')
+							| Messages
+						a.header__link(href='bookings-list.html' class=classBookings)
+							+i('home')
+							| Bookings
+						a.header__link(href='wishlists.html' class=classWishlists)
+							+i('email')
+							| Wishlists
+					.header__menu
+						a.header__link(href='list-your-property.html' class=classListYourProperty)
+							+i('building')
+							| List your property
+						a.header__link(href='host-an-experience.html' class=classHostAnExperience)
+							+i('flag')
+							| Host an experience
+				.header__btns
+					a.button.button-small.header__button(href="account-setting.html") Account
+					button.button-stroke.button-small.header__button Log out
+		button.header__burger.js-header-burger
+
+
+
+
+
+

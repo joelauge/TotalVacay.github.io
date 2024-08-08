@@ -1,0 +1,25 @@
+if footer
+else
+	footer.footer
+		.footer__center.center
+			.footer__row
+				.footer__col
+					a.footer__logo(href='index.html')
+						img.some-icon(src="img/logo-dark.svg" alt="Fleet")
+						img.some-icon-dark(src="img/logo-light.svg" alt="Fleet")
+					.footer__theme
+						+i('bulb')
+						| Dark theme
+						+theme
+				.footer__col
+					.footer__menu
+						a.footer__link(href="index.html") Stays
+						a.footer__link(href="flights.html") Flights
+						a.footer__link(href="support.html") Support
+						a.footer__link(href="cars.html") Cars
+						a.footer__link(href="things-to-do.html") Things to do
+				.footer__col
+					.footer__info Join our community 🔥
+					+subscription("email", "email", "Enter your email", "arrow-next")
+			.footer__bottom
+				.footer__copyright Copyright © 2021 UI8 LLC. All rights reserved

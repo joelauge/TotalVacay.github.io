@@ -1,0 +1,162 @@
+.travels
+    &__center
+        max-width: 1440px
+        +w
+            padding: 0 40px
+        +t
+            padding: 0
+    &__wrapper
+        padding: 80px
+        border-radius: 24px
+        background: $n7
+        +w
+            padding: 64px 40px
+        +t
+            border-radius: 0
+        +m
+            padding: 64px 32px
+        +dark
+            background: $n1
+            box-shadow: inset 0 0 0 2px $n2
+    &__title
+        margin-bottom: 12px
+    &__info
+        margin-bottom: 64px
+        +d
+            margin-bottom: 48px
+    &__sorting
+        display: flex
+        align-items: center
+        margin-bottom: 48px
+        +t
+            justify-content: space-between
+        +m
+            display: block
+    .nav
+        margin-right: auto
+        +t
+            display: none
+    .nav__link
+        &:not(:last-child)
+            margin-right: 16px
+    &__select
+        flex-shrink: 0
+        width: 256px
+        +m
+            width: 100%
+            &:not(:last-child)
+                margin-bottom: 16px
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin: -32px -16px 0
+        +x
+            margin: -32px -10px 0
+        +d
+            margin: -32px -16px 0
+        +m
+            display: block
+            margin: 0
+    &__card
+        flex: 0 0 calc(25% - 32px)
+        width: calc(25% - 32px)
+        margin: 32px 16px 0
+        border-radius: 16px
+        overflow: hidden
+        background: $n8
+        color: $n2
+        +x
+            flex: 0 0 calc(25% - 20px)
+            width: calc(25% - 20px)
+            margin: 32px 10px 0
+        +d
+            flex: 0 0 calc(33.333% - 32px)
+            width: calc(33.333% - 32px)
+            margin: 32px 16px 0
+        +t
+            flex: 0 0 calc(50% - 32px)
+            width: calc(50% - 32px)
+        +m
+            display: block
+            width: 100%
+            margin: 32px 0 0
+        +dark
+            background: $n2
+            color: $n8
+        &:hover
+            .travels__subtitle
+                color: $p1
+                +dark
+                    color: $p1
+            .travels__preview
+                img
+                    transform: scale(1.1)
+        &:nth-child(n+7)
+            +d
+                display: none
+    &__preview
+        position: relative
+        overflow: hidden
+        &:before
+            content: ""
+            display: block
+            padding-bottom: 89%
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: transform 1s
+    &__body
+        padding: 20px
+    &__line
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        &:not(:last-child)
+            margin-bottom: 16px
+            padding-bottom: 16px
+            border-bottom: 1px solid $n6
+            +dark
+                border-color: $n3
+    &__subtitle
+        +body-bold-2
+        transition: color .2s
+    &__location
+        +caption-2
+        color: $n3
+        +dark
+            color: $n6
+    &__price
+        margin-left: 16px
+        padding: 6px 8px
+        box-shadow: inset 0 0 0 2px $p4
+        border-radius: 4px
+        text-align: center
+        +hairline-2
+        color: $p4
+    &__old
+        margin-bottom: 6px
+        text-decoration: line-through
+        color: $n5
+    &__date
+        margin-right: 20px
+        +caption-2
+        color: $n4
+    &__rating
+        display: flex
+        align-items: center
+        +caption-bold-2
+        .icon
+            width: 12px
+            height: 12px
+            margin-right: 4px
+            fill: $s3
+    &__btns
+        margin-top: 64px
+        text-align: center
+        +t
+            margin-top: 48px
+        

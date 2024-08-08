@@ -1,0 +1,183 @@
+.price
+    padding: 32px
+    border-radius: 24px
+    box-shadow: 0px 40px 32px -24px rgba(15, 15, 15, 0.12)
+    border: 1px solid $n6
+    +d
+        padding: 24px
+    +m
+        padding: 16px
+    +dark
+        border-color: $n3
+    &__head
+        display: flex
+        align-items: center
+        +m
+            display: block
+    &__head &__preview
+        flex-shrink: 0
+        width: 180px
+        height: 180px
+        margin-right: 24px
+        +m
+            width: 100%
+            height: 220px
+            margin: 0 0 24px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 16px
+    &__head &__title
+        margin-bottom: 8px
+        +body-bold-2
+    &__details
+        flex-grow: 1
+    &__author
+        display: flex
+        align-items: center
+        margin-bottom: 8px
+        .price__text
+            margin-right: 4px
+            white-space: nowrap
+            +caption-2
+            color: $n4
+    &__avatar
+        flex-shrink: 0
+        width: 24px
+        height: 24px
+        margin-right: 8px 
+        img
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            object-fit: cover
+    &__man
+        +caption-bold-2
+    &__top
+        margin-bottom: 24px
+    &__top &__title
+        margin-bottom: 12px
+        +body-bold-1
+    &__photo
+        margin-bottom: 16px 
+        img
+            width: 100% 
+            border-radius: 16px 
+    &__parameter
+        display: inline
+        +caption-2
+        color: $n4
+        &:not(:first-child)
+            margin-left: 4px
+            &:before
+                content: "•"
+                margin-right: 4px
+    &__rating
+        display: flex
+        align-items: center
+        margin-top: 24px
+        padding-top: 24px
+        border-top: 1px solid $n6
+        +dark
+            border-color: $n2
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 8px
+            fill: $s3
+    &__number
+        font-weight: 500
+    &__reviews
+        margin-left: 8px
+        color: $n4
+    &__description
+        margin-top: 32px
+        padding: 8px
+        border-radius: 20px
+        background: $n7
+        +dark
+            background: $n2
+        &_flex
+            display: flex
+            flex-wrap: wrap
+            +m
+                display: block
+            .price__item
+                flex: 0 0 50%
+                &:nth-child(2n)
+                    position: relative
+                    &:before
+                        content: ""
+                        position: absolute
+                        top: 12px
+                        left: 0
+                        bottom: 12px
+                        width: 1px
+                        background: $n6
+                        +dark
+                            background: $n4
+                        +m
+                            display: none
+    &__item
+        display: flex
+        padding: 12px
+    &__icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 32px
+        height: 32px
+        margin-right: 12px
+        .icon
+            width: 24px
+            height: 24px
+            fill: $n5
+    &__category
+        +caption-2
+        color: $n4
+    &__subtitle
+        +body-bold-2
+    &__body
+        margin-top: 32px
+    &__stage
+        margin-bottom: 24px
+        +body-bold-1
+    .subscription
+        margin: -8px 0 16px
+    &__row
+        display: flex
+        padding: 8px 12px
+        &:last-child
+            background: $n7
+            border-radius: 8px
+            +dark
+                background: $n2
+            .price__cell
+                &:first-child
+                    color: $n2
+                    +dark
+                        color: $n8
+        &:not(:last-child)
+            margin-bottom: 4px 
+    &__cell
+        &:first-child
+            margin-right: auto
+            color: $n4
+        &:nth-child(2)
+            flex-shrink: 0
+            margin-left: 20px
+            text-align: right
+            font-weight: 500
+    &__note
+        margin-top: 32px
+        text-align: center
+        +caption-2
+        color: $n4
+        .icon
+            position: relative
+            top: -1px
+            width: 12px
+            height: 12px
+            margin-right: 8px
+            fill: $n4

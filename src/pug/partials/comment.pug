@@ -1,0 +1,50 @@
+.comment
+	form.comment__form
+		.comment__title Add a review
+		.comment__head
+			.comment__text Be the first to review <span>Spectacular views of Queenstown</span>
+			.rating.js-rating(data-rating='4' data-read="false")
+		.comment__field
+			input.comment__input(type="text" name="comment" placeholder="Share your thoughts" required)
+			.smile.js-smile
+				button.smile__button.js-smile-button(type="button")
+					+i('smile')
+					+i('smile-fill')
+				.smile__body.js-smile-body
+					.smile__item ❤️
+					.smile__item 🙌
+					.smile__item 👍
+					.smile__item 😊
+					.smile__item 🤣
+					.smile__item 😡
+			button.button-small.comment__button
+				span Post it!
+				+i('arrow-next')
+	.comment__head
+		.comment__title 3 comments
+		select.select
+			option Newest
+			option Popular
+			option All
+	.comment__list
+		mixin item(avatar, author, time, comment)
+			.comment__item
+				.comment__avatar
+					img(src=avatar alt="Avatar")
+				.comment__details
+					.comment__top
+						.comment__author=author
+						.rating.js-rating(data-rating='5' data-read="true")
+					.comment__content=comment
+					.comment__foot
+						.comment__time=time 
+						.comment__actions
+							button.comment__action Like
+							button.comment__action Reply
+		+item("img/content/avatar-1.jpg", "Myrtie Runolfsson", "about 1 hour ago", "We had the most spectacular view. Unfortunately it was very hot in the room from 2-830 pm due to no air conditioning and no shade.")
+		+item("img/content/avatar-2.jpg", "Osbaldo Beahan", "about 5 hour ago", "Stunning views of Queenstown. Very peaceful. Love it so much. Definitely gonna come back and visit.")
+		+item("img/content/avatar-3.jpg", "Tobin Hackett", "1 day ago", "Best place I stayed in all of NZ. 🙌 🎉 😎")
+	.comment__btns
+		button.button-stroke.button-small.comment__button
+			+loader
+			span Loading comment

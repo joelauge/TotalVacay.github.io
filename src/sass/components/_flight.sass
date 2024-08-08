@@ -1,0 +1,128 @@
+.flight
+    display: flex
+    align-items: flex-end
+    padding: 32px
+    border-radius: 24px
+    box-shadow: inset 0 0 0 1px $n6
+    transition: all .2s
+    +d
+        display: block
+        padding: 24px
+    &:hover
+        box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.08), inset 0 0 0 2px $n8
+        background: $n7
+    +dark
+        box-shadow: inset 0 0 0 1px $n3
+        &:hover
+            box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.08)
+            background: $n2
+    &__item
+        display: flex
+        align-items: center
+        +t
+            display: block
+        &:not(:last-child)
+            margin-bottom: 24px
+            +t
+                margin-bottom: 20px
+                padding-bottom: 20px
+                border-bottom: 1px solid $n6
+                +dark
+                    border-color: $n3
+    &__logo
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-shrink: 0
+        width: 160px
+        height: 80px
+        padding: 10px
+        border-radius: 8px
+        background: $n7
+        +t
+            width: 100%
+            height: 60px
+            margin-bottom: 12px
+        +dark
+            background: $n5
+        img
+            max-width: 100%
+            max-height: 100%
+    &__details
+        display: flex
+        align-items: center
+        flex-grow: 1
+        padding: 0 20px
+    &__box
+        flex-grow: 1
+        text-align: center
+    &__title
+        margin-bottom: 3px
+        +body-bold-1
+    &__time
+        font-weight: 500
+        color: $n4
+    &__note
+        flex-shrink: 0
+        padding: 8px 7px 0
+        border-top: 1px solid $n6
+        +caption-2
+        color: $n4
+        +dark
+            border-color: $n3
+    &__wrap
+        flex-grow: 1
+    &__control
+        flex-shrink: 0
+        width: 180px
+        +x
+            width: 160px
+        +d
+            display: flex
+            align-items: center
+            width: 100%
+            margin-top: 20px
+            padding-top: 20px
+            border-top: 1px solid $n6
+            +dark
+                border-color: $n3
+    &__info
+        display: flex
+        align-items: center
+        margin-bottom: 12px
+        +caption-2
+        color: $n4
+        +d
+            margin: 0 auto 0 0
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 4px
+            fill: $n4
+    &__button
+        width: 100%
+        padding: 0 10px
+        +d
+            flex-shrink: 0
+            width: 160px
+            margin-left: 24px
+        &:hover
+            box-shadow: inset 0 0 0 1px $p1
+            background: $p1
+            color: $n8
+            .flight__price
+                display: none
+            .flight__more
+                display: inline-flex
+                .icon
+                    width: 16px
+                    height: 16px
+            +dark
+                box-shadow: inset 0 0 0 1px $p1
+                background: $p1
+    &__price
+        color: $p4
+    &__more
+        display: none
+        align-items: center
+        color: $n8

@@ -1,0 +1,20 @@
+.section.adventure
+	.adventure__center.center
+		.adventure__head
+			h2.adventure__title.h2 Let’s go on an adventure
+			.adventure__info.info Find and book a great experience.
+		.adventure__wrapper
+			.adventure__slider.js-slider-adventure
+				mixin item(image, subtitle, places)
+					.adventure__item
+						.adventure__preview
+							img(src=image alt="Adventure")
+						.adventure__details
+							.adventure__subtitle=subtitle 
+							a.status.adventure__places(href="stays-category.html")=places
+				+item("img/content/adventure-pic-1.svg", "Luxury resort at the sea", "9,326 places")
+				+item("img/content/adventure-pic-2.svg", "Camping amidst the wild", "12,326 places")
+				+item("img/content/adventure-pic-3.svg", "Luxury resort at the sea", "5,326 places")
+				+item("img/content/adventure-pic-1.svg", "Luxury resort at the sea", "9,326 places")
+				+item("img/content/adventure-pic-2.svg", "Camping amidst the wild", "12,326 places")
+				+item("img/content/adventure-pic-3.svg", "Luxury resort at the sea", "5,326 places")

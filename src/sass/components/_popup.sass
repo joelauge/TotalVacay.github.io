@@ -1,0 +1,76 @@
+.popup
+    width: 100%
+    margin: auto  
+    background: $n8
+    border-radius: 16px
+    box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.08)
+    z-index: 2
+    +dark
+        background: $n1
+    .mfp-close
+        position: absolute
+        top: -16px
+        right: -16px
+        width: 32px
+        height: 32px
+        border-radius: 50% 
+        line-height: normal
+        opacity: 1
+        border: 1px solid transparent
+        box-shadow: 0px 8px 16px rgba(15, 15, 15, 0.1)
+        background: $n8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15' fill='none' viewBox='0 0 14 15'%3E%3Cpath fill-rule='evenodd' d='M.293 1.289a1 1 0 0 1 1.414 0L7 6.582l5.293-5.293a1 1 0 0 1 1.414 1.414L8.414 7.996l5.293 5.293a1 1 0 0 1-1.414 1.414L7 9.41l-5.293 5.293a1 1 0 0 1-1.414 0 1 1 0 0 1 0-1.414l5.293-5.293L.293 2.703a1 1 0 0 1 0-1.414z' fill='%23777E90'/%3E%3C/svg%3E") no-repeat 50% 48% / 12px auto
+        font-size: 0
+        transition: all .2s 
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        +dark
+            border-color: $n3
+            background-color: $n2
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23FCFCFD' d='M1.613.2l.094.083L5 3.585 8.293.293a1 1 0 0 1 1.414 0 1 1 0 0 1 .083 1.32l-.083.094L6.415 5l3.292 3.293a1 1 0 0 1-1.32 1.497l-.094-.083L5 6.415 1.707 9.707A1 1 0 0 1 .21 8.387l.083-.094L3.585 5 .293 1.707a1 1 0 0 1 0-1.414A1 1 0 0 1 1.613.21z'/%3E%3C/svg%3E")
+        &:hover
+            box-shadow: 0px 8px 16px rgba(15, 15, 15, 0.2)
+            border-color: $n6
+            +dark
+                border-color: $n8
+    &_login
+        max-width: 544px
+        padding: 72px 96px
+        +m
+            padding: 32px 24px
+    &_avatars
+        max-width: 663px
+        padding: 8px 8px 32px
+
+.mfp-container
+    padding: 20px
+    +m
+        padding: 20px 16px
+        
+@media (max-width: 900px)
+    .mfp-container
+        padding: 20px 16px 
+            
+.mfp-bg
+    background: rgba($n1,.3)
+    +dark
+        background: rgba($n2,.8)
+
+.mfp-zoom-in 
+    .popup
+        opacity: 0
+        transition: all 0.2s ease-in-out
+        transform: scale(0.8) 
+    &.mfp-bg 
+        opacity: 0
+        transition: all 0.2s ease-out
+    &.mfp-ready
+        .popup
+            opacity: 1
+            transform: scale(1) 
+        &.mfp-bg 
+            opacity: 1
+    &.mfp-removing 
+        .popup 
+            transform: scale(0.8) 
+            opacity: 0
+        &.mfp-bg
+            opacity: 0

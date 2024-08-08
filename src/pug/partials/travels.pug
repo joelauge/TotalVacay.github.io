@@ -1,0 +1,58 @@
+.section.travels
+	.travels__center.center
+		.travels__wrapper
+			h2.travels__title.h2 Go somewhere
+			.travels__info.info Let’s go on an adventure
+			.travels__sorting
+				.nav
+					a.nav__link.active(href="#")
+						+i('coin')
+						| Featured
+					a.nav__link(href="#")
+						+i('coin')
+						| Family-friendly
+					a.nav__link(href="#")
+						+i('coin')
+						| On sale
+					a.nav__link(href="#")
+						+i('coin')
+						| Sub nav
+				.travels__select.tablet-show
+					select.select
+						option Featured
+						option Family-friendly
+						option On sale
+						option Sub nav
+				.travels__select
+					select.select
+						option Recently added
+						option Long added
+			.travels__list
+				mixin card(srcSet, src, location)
+					a.travels__card(href="stays-product.html")
+						.travels__preview
+							img(srcSet=`${srcSet} 2x` src=src alt="Card")
+						.travels__body
+							.travels__line
+								.travels__details
+									.travels__subtitle The grand resort
+									.travels__location=location 
+								.travels__price
+									.travels__old $356
+									.travels__actual $267
+							.travels__line
+								.travels__date Tue, Jul 20 - Fri, Jul 23
+								.travels__rating
+									+i('star')
+									| 4.9
+				+card("img/content/catalog-pic-1.jpg", "img/content/catalog-pic-1@2x.jpg", "Karineside")
+				+card("img/content/catalog-pic-2.jpg", "img/content/catalog-pic-2@2x.jpg", "East Barrett")
+				+card("img/content/catalog-pic-3.jpg", "img/content/catalog-pic-3@2x.jpg", "Steuberbury")
+				+card("img/content/catalog-pic-4.jpg", "img/content/catalog-pic-4@2x.jpg", "Idaview")
+				+card("img/content/catalog-pic-5.jpg", "img/content/catalog-pic-5@2x.jpg", "Yasminfurt")
+				+card("img/content/catalog-pic-6.jpg", "img/content/catalog-pic-6@2x.jpg", "North Edenshire")
+				+card("img/content/catalog-pic-7.jpg", "img/content/catalog-pic-7@2x.jpg", "Archibaldtown")
+				+card("img/content/catalog-pic-1.jpg", "img/content/catalog-pic-1@2x.jpg", "West Gregoria")
+			.travels__btns
+				a.button-stroke.button-small(href="stays-category.html") View all
+

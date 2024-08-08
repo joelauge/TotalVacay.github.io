@@ -1,0 +1,118 @@
+---
+title: Fleet
+classThingsToDo: active
+liveTitle: Live anywhere
+classPlanning: section planning
+planningTitle: Travel to make memories all around the world
+classPlaces: section places
+placesTitle: Explore nearby
+placesInfo: 10,789 beautiful places to go
+---
+extends layouts/layout
+block content
+	.section.main.main_tasks
+		.main__center.center
+			.main__preview
+				picture
+					source(media="(max-width: 767px)" srcSet="img/content/main-pic-mobile-5.jpg")
+					img(src="img/content/main-pic-5.jpg" alt="Main")
+				.main__wrap
+					h1.main__title.hero Things to do
+					.main__info.info Find and book a great experience.
+					a.button.main__button(href="category.html") Start your search
+			.panel.panel_tasks
+				.panel__background
+				.panel__nav
+					a.panel__link(href="index.html") Stays
+					a.panel__link(href="flights.html") Flights
+					a.panel__link(href="cars.html") Cars
+					a.panel__link.active(href="things-to-do.html") Things to do
+				.panel__body
+					.panel__row
+						+location("", "location", "Location", "Where are you going?")
+						+datesingle("", "MMM DD, YYYY", true, "calendar", "Date", "Add date")
+						+travelers("", "user", "Travelers", "Add guests")
+						a.panel__search(href="category.html")
+							+i('search')
+	include partials/adventure
+	include partials/travel
+	include partials/work
+	include partials/live
+	include partials/planning
+	include partials/places
+	include partials/hosts
+	.section.categories
+		.categories__center.center
+			.categories__inner
+				.categories__head
+					h2.categories__title.h2 Browse by category
+					.categories__info.info Let’s go on an adventure
+				.categories__wrapper
+					.categories__slider.js-slider-categories
+						mixin item(url, counter, icon, subtitle, content)
+							a.categories__item(href=url)
+								.status.categories__counter=counter
+								.categories__icon
+									+i(icon)
+								.categories__subtitle=subtitle 
+								.categories__content=content
+						+item("stays-category.html", "256.356", "building", "City house", "Small description")
+						+item("stays-category.html", "333.356", "building", "City house", "Small description")
+						+item("stays-category.html", "123.246", "building", "City house", "Small description")
+						+item("stays-category.html", "443.111", "building", "City house", "Small description")
+						+item("stays-category.html", "333.356", "building", "City house", "Small description")
+						+item("stays-category.html", "256.356", "building", "City house", "Small description")
+						+item("stays-category.html", "256.356", "building", "City house", "Small description")
+						+item("stays-category.html", "333.356", "building", "City house", "Small description")
+						+item("stays-category.html", "123.246", "building", "City house", "Small description")
+						+item("stays-category.html", "443.111", "building", "City house", "Small description")
+	.popup.popup_login.mfp-hide#popup-login
+		.login
+			.login__item
+				.login__title.h3 Sign up on Fleet
+				.login__info Use Your OpenID to Sign up
+				.login__btns
+					button.button.login__button
+						+i('google')
+						span Google
+					button.button-black.login__button
+						+i('apple')
+						span Apple
+				.login__note Or continue with email
+				.subscription
+					input.subscription__input(type="email" name="email" placeholder="Enter your email" required)
+					button.subscription__btn
+						+i('arrow-next')
+				.login__foot Already have an account? <a class="login__link" href="#">Login</a>
+			.login__item
+				.login__title.h3 Sign in
+				.login__form
+					.field.field_view
+						.field__wrap
+							input.field__input(type="password" name="password" placeholder="Password" required)
+							button.field__view
+								+i('eye')
+					button.button.login__button Login
+				.login__foot
+					a.login__password(href="#") Forgot password?
+			.login__item
+				.login__title.h3 Let’s confirm it’s really you
+				.login__info Help us secure your account. Please complete the verifications below
+				.login__form
+					.login__variants
+						+radio("Get the code by text message (SM) at +1 234 567 890", "login", true)
+						+radio("Get the code by email at tranm••••••••••••@gm•••.com", "login", false)
+					button.button.login__button Continue
+			.login__item
+				.login__title.h3 Enter your security code
+				.login__info We texted your code to +1 234 567 890
+				.login__form
+					.login__code
+						.login__number
+							input(type="tel")
+						.login__number
+							input(type="tel")
+						.login__number
+							input(type="tel")
+						.login__number
+							input(type="tel")

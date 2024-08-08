@@ -1,0 +1,163 @@
+---
+title: Fleet
+classHeader: header_border
+classHostAnExperience: active
+---
+extends layouts/layout
+block content
+	.section.upload
+		.upload__center.center
+			.control
+				a.button-stroke.button-small.control__button(href="index.html")
+					+i('arrow-left')
+					span Go home
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Home
+					li.breadcrumbs__item Host an experience
+			.upload__inner
+				.upload__wrapper
+					.upload__head
+						h2.upload__title.h2 Host an experience
+						a.button-stroke.button-small.upload__button(href="list-your-property.html") List your property
+					.upload__form
+						.upload__list
+							.upload__item
+								.upload__category Upload photos
+								.upload__note Drag or choose your file to upload
+								.upload__file
+									input.upload__input(type="file")
+									.upload__icon
+										+i('upload-file')
+									.upload__format PNG, GIF, WEBP, MP4. Max 500Mb.
+							.upload__item
+								.upload__category Property details
+								.upload__fieldset
+									.field
+										.field__label title
+										.field__wrap
+											input.field__input(type="text" name="title" placeholder='e. g. "Spectacular views of Queenstown"' required)
+									.upload__row
+										.upload__col.upload__col_w70
+											.upload__label price
+											.upload__line
+												.upload__cell
+													.field.field_empty
+														.field__wrap
+															input.field__input(type="text" name="price" placeholder='e. g. "180"' required)
+												.upload__cell
+													.field.field_empty
+														.field__wrap
+															select.select
+																option $ USD
+																option € EUR
+												.upload__cell
+													.field.field_empty
+														.field__wrap
+															select.select
+																option per Night
+																option per Day
+																option per Week
+										.upload__col.upload__col_w30
+											.upload__label Discount
+											.upload__line
+												.upload__cell
+													.field.field_empty
+														.field__wrap
+															input.field__input(type="text" name="discount" placeholder='e. g. "10"' required)
+												.upload__cell
+													.field.field_empty
+														.field__wrap
+															select.select
+																option %
+																option $
+																option €
+									.field.field_map
+										.field__label location
+										.field__wrap
+											input.field__input(type="text" name="location" placeholder='e. g. “Queenstown, Otago, New Zealand”' required)
+											button.field__map Google map
+									.upload__row
+										.upload__col.upload__col_w33
+											.field
+												.field__label bed room
+												.field__wrap
+													select.select
+														option 1
+														option 2
+														option 3
+														option 4
+										.upload__col.upload__col_w33
+											.field
+												.field__label living room
+												.field__wrap
+													select.select
+														option 1
+														option 2
+														option 3
+														option 4
+										.upload__col.upload__col_w33
+											.field
+												.field__label kitchen
+												.field__wrap
+													select.select
+														option 1
+														option 2
+														option 3
+														option 4
+									.field
+										.field__label description
+										.field__wrap
+											textarea.field__textarea(name="description" placeholder='e. g. "Spectacular views of Queenstown"' required)
+							.upload__item
+								.upload__category Amenities
+								.upload__fieldset
+									.upload__row
+										.upload__col.upload__col_w50
+											.field
+												.field__wrap
+													input.field__input(type="text" name="service1" placeholder='e. g. Wifi 24/7' required)
+										.upload__col.upload__col_w50
+											.field
+												.field__wrap
+													input.field__input(type="text" name="service2" placeholder='e. g. Wifi 24/7' required)
+									.upload__row
+										.upload__col.upload__col_w50
+											.field
+												.field__wrap
+													input.field__input(type="text" name="service1" placeholder='e. g. Wifi 24/7' required)
+										.upload__col.upload__col_w50
+											.field
+												.field__wrap
+													input.field__input(type="text" name="service2" placeholder='e. g. Wifi 24/7' required)
+							.upload__item
+								.upload__category Core features
+								.upload__fieldset
+									.upload__row
+										.upload__col.upload__col_w50
+											.field
+												.field__wrap
+													input.field__input(type="text" name="service5" placeholder='e. g. Wifi 24/7' required)
+										.upload__col.upload__col_w50
+											.field
+												.field__wrap
+													input.field__input(type="text" name="service6" placeholder='e. g. Wifi 24/7' required)
+									button.button-stroke.upload__button
+										+i('plus')
+										span Add more feature
+						.upload__foot
+							button.button-stroke.upload__button.js-upload-button Preview
+							.button.upload__button
+								span Submit for review
+								+i('arrow-next')
+							.upload__saving Auto saving
+								+loader
+				.upload__preview.js-upload-preview
+					.upload__wrap
+						button.upload__close.js-upload-close
+							+i('close')
+						.upload__subtitle Preview
+						+card("stays-product.html", "img/content/card-pic-5@2x.jpg", "img/content/card-pic-5.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$200 total", "4.8", "12")
+
+
+

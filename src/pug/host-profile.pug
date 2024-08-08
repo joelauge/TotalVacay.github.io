@@ -1,0 +1,102 @@
+---
+title: Fleet
+classBest: section-mb0 best
+bestTitle: Fleet’s super hosts
+bestInfo: You may also like
+classTestimonials: section-pd section-mb0
+---
+extends layouts/layout
+block content
+	.section.host
+		.host__center.center
+			.host__photo
+				img(src="img/content/bg-profile-host.jpg" alt="Nature")
+			.host__row
+				.profile
+					.profile__top
+						.profile__avatar
+							img(src="img/content/avatar.jpg" alt="Avatar")
+							.profile__check
+								+i('check')
+						.profile__description
+							.profile__man Zoe towne
+							.profile__rating
+								+i('star')
+								.profile__number 4.8
+								.profile__reviews (256 reviews)
+					.profile__body
+						.profile__parameters
+							.profile__parameter
+								+i('home')
+								| Superhost
+							.profile__parameter
+								+i('star-outline')
+								| 256 reviews
+						a.profile__site(href="https://ui8.net" target="_blank")
+							+i('globe')
+							| https://ui8.net
+						.profile__control
+							a.button-stroke.button-small.profile__button(href="message-center.html") Contact
+							.actions.js-actions
+								.actions__item.actions__item_share.js-actions-item
+									button.button-circle-stroke.button-small.actions__button.js-actions-button
+										+i('share')
+									.actions__body.actions__body_up.js-actions-body
+										.actions__title Share link to this page
+										.actions__list.share-btn(data-url="https://ui8.net")
+											a.actions__link.btn-twitter(data-id="tw")
+												span
+													+i('twitter')
+											a.actions__link.btn-facebook(data-id="fb")
+												span
+													+i('facebook')
+						.profile__socials
+							a.profile__social(href="https://twitter.com/ui8" target="_blank")
+								+i('twitter')
+							a.profile__social(href="https://www.instagram.com/ui8net/" target="_blank")
+								+i('instagram')
+							a.profile__social(href="https://www.facebook.com/ui8.net/" target="_blank")
+								+i('facebook')
+						.profile__note Member since Mar 15, 2021
+						button.profile__report
+							+i('flag')
+							| Report this property
+				.host__wrapper
+					.host__container
+						.host__section
+							.host__title About Zoe Towne
+							.host__content Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built
+							.host__options
+								.host__option
+									.host__category
+										+i('home')
+										| Lives in
+									.host__text Auckland, New Zealand
+								.host__option
+									.host__category
+										+i('route')
+										| Date:
+									a.host__text(href="index.html") Get direction
+								.host__option
+									.host__category
+										+i('comment')
+										| Speak
+									.host__text English, Vietnamese
+						.host__section
+							.host__title Zoe Towne’s listing
+							.nav
+								a.nav__link.active(href="#") Stays
+								a.nav__link(href="#") Experiences
+							.host__inner
+								.host__slider.js-slider-host
+									+card("stays-product.html", "img/content/card-pic-1@2x.jpg", "img/content/card-pic-1.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$200 total", "4.8", "12")
+									+card("stays-product.html", "img/content/card-pic-2@2x.jpg", "img/content/card-pic-2.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$234", "$123", "modem", "Free wifi", "burger", "Breakfast included", "$123 total", "4.9", "15")
+									+card("stays-product.html", "img/content/card-pic-3@2x.jpg", "img/content/card-pic-3.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$200 total", "4.8", "12")
+									+card("stays-product.html", "img/content/card-pic-4@2x.jpg", "img/content/card-pic-4.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$234", "$123", "modem", "Free wifi", "burger", "Breakfast included", "$123 total", "4.9", "15")
+					include partials/comment
+	include partials/best
+	include partials/testimonials
+
+
+
+

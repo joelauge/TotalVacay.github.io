@@ -1,0 +1,55 @@
+.smile
+    position: relative
+    &.active
+        .smile__button
+            .icon
+                &:first-child
+                    display: none
+                &:nth-child(2)
+                    display: inline-block
+        .smile__body
+            visibility: visible
+            opacity: 1
+    &__button
+        .icon
+            width: 24px
+            height: 24px
+            fill: $n4
+            transition: fill .2s
+            &:nth-child(2)
+                display: none
+        &:hover
+            .icon
+                fill: $p1
+    &__body
+        position: absolute
+        left: 50%
+        bottom: calc(100% + 10px)
+        width: 188px
+        padding: 0 10px 4px 
+        display: flex
+        justify-content: center
+        align-items: center
+        transform: translateX(-50%)
+        border-radius: 32px
+        background: $n8
+        box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.2) 
+        visibility: hidden
+        opacity: 0
+        transition: all .2s  
+        &:after
+            content: ""
+            position: absolute
+            top: 100%
+            left: 50%
+            transform: translateX(-50%)
+            +arr(12,6,$n8,b) 
+        +dark
+            background: $n2
+            &:after
+                border-color: $n2 transparent transparent transparent  
+    &__item
+        margin: 12px 6px 6px
+        cursor: pointer
+
+        

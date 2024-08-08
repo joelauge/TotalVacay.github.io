@@ -1,0 +1,115 @@
+.sorting
+    margin-bottom: 80px
+    +d
+        margin-bottom: 48px
+    +m
+        margin-bottom: 32px
+    .control
+        margin-bottom: 48px
+        padding: 0
+        +m
+            display: none
+    &__body
+        display: flex
+        align-items: flex-start
+        margin-bottom: 32px
+        padding-bottom: 32px
+        border-bottom: 1px solid $n6
+        +dark
+            border-color: $n3
+    &__box
+        margin-right: auto
+    &__line
+        display: flex
+        align-items: center
+    .nav
+        +t
+            display: none
+    &__location
+        position: relative
+        margin-left: 40px
+        flex-shrink: 0
+        +m
+            display: none
+        .sorting__button
+            .icon
+                width: 12px
+                height: 12px
+            &.active
+                background: $p1
+                box-shadow: inset 0 0 0 2px $p1
+                color: $n8
+                .icon
+                    transform: rotate(180deg)
+                    fill: $n8
+            +dark
+                box-shadow: inset 0 0 0 2px $n3
+                &:hover
+                    background: $n3
+                &.active
+                    background: $p1
+                    box-shadow: inset 0 0 0 2px $p1
+    &__map
+        position: absolute
+        top: calc(100% + 16px)
+        right: 0
+        z-index: 5
+        width: 640px
+        height: 480px
+        padding: 4px
+        background: $n8
+        border-radius: 24px 0 24px 24px
+        border: 1px solid $n6
+        box-shadow: 0px 40px 64px -16px rgba(15, 15, 15, 0.1)
+        visibility: hidden
+        opacity: 0
+        transition: all .4s
+        &.show
+            visibility: visible
+            opacity: 1
+        iframe
+            width: 100%
+            height: 100%
+            border-radius: 21px 0 21px 21px
+    &__title
+        margin-bottom: 12px
+        +m
+            font-size: 32px
+    &__sale
+        margin-right: 16px
+        padding: 8px 8px 6px
+        box-shadow: inset 0 0 0 2px $p4
+        border-radius: 4px
+        +hairline-2
+        color: $p4
+    &__details
+        +body-bold-2
+    &__foot
+        display: flex
+        justify-content: space-between
+        align-items: center
+        +m
+            display: block
+    &__select
+        flex-shrink: 0
+        width: 256px
+        +m
+            width: 100% 
+        &:nth-child(2)
+            +m
+                margin-bottom: 16px
+    &_flights
+        margin-bottom: 64px 
+        +m
+            margin-bottom: 32px 
+    &_flights .control
+        margin-bottom: 32px
+    &_flights &__foot
+        padding-top: 32px
+        border-top: 1px solid $n6
+        +m
+            display: block
+            padding-top: 0
+            border: none
+        +dark
+            border-color: $n3  

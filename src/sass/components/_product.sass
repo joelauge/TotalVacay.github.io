@@ -1,0 +1,120 @@
+.product
+    +m
+        padding-top: 48px
+    .control
+        +m
+            display: none
+    &__head
+        display: flex
+        align-items: flex-start
+        margin-bottom: 64px
+        +m
+            display: block
+            margin-bottom: 48px
+    &__box
+        flex-grow: 1
+        padding-right: 40px
+        +m
+            margin-bottom: 32px
+            padding-right: 0
+    &__title
+        max-width: 640px
+        margin-bottom: 16px
+        +m
+            font-size: 32px
+    &__line
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+    &__avatar
+        flex-shrink: 0
+        width: 24px
+        height: 24px
+        margin-right: 20px
+        img
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            object-fit: cover
+    &__rating
+        display: flex
+        align-items: center
+        margin-right: 20px
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 8px
+            fill: $s3
+    &__number
+        font-weight: 500
+    &__reviews
+        margin-left: 8px
+        color: $n4
+    &__options
+        display: flex
+        flex-wrap: wrap
+        margin: -4px 0 6px -20px
+        +t
+            flex: 0 0 100%
+            margin-top: 6px
+    &__option
+        display: flex
+        align-items: center
+        margin: 10px 0 0 20px
+        color: $n4
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 8px
+            fill: $n4
+    .actions
+        flex-shrink: 0
+    &__grid
+        margin: -32px -16px 0
+        +m
+            margin: 0
+        &:after
+            content: " "
+            display: table
+            clear: both
+    &__photo
+        float: left
+        width: calc(50% - 32px)
+        margin: 32px 16px 0
+        +m
+            float: none
+            width: 100% 
+            margin: 0
+        img
+            max-width: 100%
+            border-radius: 16px  
+        &:first-child
+            float: left
+            width: calc(100% - 32px)
+            +m
+                float: none
+                width: 100% 
+        &:nth-child(2n+1)
+            float: left
+            +m
+                float: none
+        &:nth-child(2n)
+            float: right
+            +m
+                float: none
+        +nl
+            +m
+                margin-bottom: 24px
+    &__foot
+        margin-top: 32px
+        text-align: center
+    &__foot &__button
+        .icon
+            width: 24px
+            height: 24px
+    &_photo
+        padding-top: 80px
+        +t
+            padding-top: 48px
+        +m
+            padding-top: 32px

@@ -1,0 +1,113 @@
+---
+title: Fleet
+classStays: active
+classBest: section-mb0 best
+bestTitle: Superhost
+bestInfo: 300+ superhost
+classTestimonials: section-pd section-mb0
+---
+extends layouts/layout
+block content
+	.section-mb80.main.main_stays-category
+		.main__center.center
+			.main__preview
+				img(src="img/content/main-pic-2.jpg" alt="Main")
+				.main__wrap
+					h1.main__title.hero South Island
+					.main__info.info 🇳🇿 New Zealand
+			.panel.panel_stays-category
+				.panel__background
+				.panel__body
+					.panel__row
+						+location("location_small", "location", "Location", false)
+						+daterange("datepicker_small", "MMM DD, YYYY", "calendar", "Check in", "Check out", false, false)
+						+travelers("travelers_small", "user", false)
+						button.panel__search
+							+i('search')
+	.section.catalog
+		.sorting
+			.sorting__center.center
+				.control
+					a.button-stroke.button-small.control__button(href="index.html")
+						+i('arrow-left')
+						span Go home
+					ul.breadcrumbs
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="index.html") Home
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="index.html") Stays
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="stays-category.html") New Zealand
+						li.breadcrumbs__item South Island
+				.sorting__body
+					.sorting__box
+						h2.sorting__title.h2 Places to stay
+						.sorting__line
+							.sorting__sale 300+ stays
+							.sorting__details May 1 - 14, 2 guests
+					.sorting__location
+						button.button-stroke.sorting__button.js-sorting-button
+							span Show map
+							+i('arrow-bottom')
+						.sorting__map.js-sorting-map
+							iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63817.0803287881!2d168.63234961382247!3d-45.04173987887954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d51df1d7a8de5f%3A0x500ef868479a600!2z0JrRg9C40L3RgdGC0LDRg9C9LCDQndC-0LLQsNGPINCX0LXQu9Cw0L3QtNC40Y8!5e0!3m2!1sru!2sua!4v1624887132616!5m2!1sru!2sua" width="600" height="450" loading="lazy")
+				.sorting__foot
+					.nav
+						a.nav__link.active(href="#") Entire homes
+						a.nav__link(href="#") Cancellation flexibility
+						a.nav__link(href="#") Closest beach
+						a.nav__link(href="#") For long stays
+					.sorting__select.tablet-show
+						select.select
+							option Entire homes
+							option Cancellation flexibility
+							option Closest beach
+							option For long stays
+					.sorting__select
+						select.select
+							option On sales
+							option On delivery
+							option In exchange
+		.section-mb80.browse
+			.browse__center.center
+				.browse__inner
+					.browse__head.browse__head_small
+						h4.browse__title.h4 Explore mountains in New Zealand
+					.browse__wrapper
+						.browse__slider.js-slider-browse
+							mixin slide(srcSet, src, category, subtitle, content)
+								a.browse__card(href="stays-category.html")
+									.browse__preview
+										img(srcSet=`${srcSet} 2x` src=src alt="Card")
+										.status-black.browse__category=category
+									.browse__subtitle=subtitle 
+									.browse__content
+										+i('home')
+										=content
+							+slide("img/content/browse-pic-1.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Mountain house", "650,111")
+							+slide("img/content/browse-pic-2.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Mountain house", "664,423")
+							+slide("img/content/browse-pic-5.jpg", "img/content/browse-pic-5@2x.jpg", "30% off", "Mountain house", "324,565")
+							+slide("img/content/browse-pic-4.jpg", "img/content/browse-pic-4@2x.jpg", "from $190", "Mountain house", "443,879")
+							+slide("img/content/browse-pic-1.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Mountain house", "650,111")
+							+slide("img/content/browse-pic-2.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Mountain house", "664,423")
+							+slide("img/content/browse-pic-3.jpg", "img/content/browse-pic-3@2x.jpg", "20% off", "Mountain house", "324,565")
+		.catalog__body
+			.catalog__center.center
+				h4.catalog__title.h4 Over 300 stays
+				.catalog__list
+					+card("stays-product.html", "img/content/card-pic-1@2x.jpg", "img/content/card-pic-1.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$200 total", "4.8", "12")
+					+card("stays-product.html", "img/content/card-pic-2@2x.jpg", "img/content/card-pic-2.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$234", "$123", "modem", "Free wifi", "burger", "Breakfast included", "$123 total", "4.9", "15")
+					+card("stays-product.html", "img/content/card-pic-3@2x.jpg", "img/content/card-pic-3.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$456", "$401", "modem", "Free wifi", "burger", "Breakfast included", "$456 total", "4.8", "125")
+					+card("stays-product.html", "img/content/card-pic-4@2x.jpg", "img/content/card-pic-4.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$111", "$97", "modem", "Free wifi", "burger", "Breakfast included", "$222 total", "5.0", "52")
+					+card("stays-product.html", "img/content/card-pic-5@2x.jpg", "img/content/card-pic-5.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$42 total", "4.6", "55")
+					+card("stays-product.html", "img/content/card-pic-6@2x.jpg", "img/content/card-pic-6.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$222", "$111", "modem", "Free wifi", "burger", "Breakfast included", "$111 total", "4.5", "122")
+					+card("stays-product.html", "img/content/card-pic-7@2x.jpg", "img/content/card-pic-7.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$200 total", "4.8", "44")
+					+card("stays-product.html", "img/content/card-pic-8@2x.jpg", "img/content/card-pic-8.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$86", "$45", "modem", "Free wifi", "burger", "Breakfast included", "$567 total", "4.8", "12")
+					+card("stays-product.html", "img/content/card-pic-9@2x.jpg", "img/content/card-pic-9.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$200 total", "4.8", "11")
+				.catalog__btns
+					button.button-stroke.catalog__button
+						+loader
+						span Show more
+	include partials/newsletter
+	include partials/best
+	include partials/testimonials

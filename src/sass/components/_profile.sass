@@ -1,0 +1,222 @@
+.profile
+    padding: 32px 20px
+    border: 1px solid $n6
+    border-radius: 24px
+    background: $n8
+    +m
+        padding: 24px 16px
+    +dark
+        border-color: $n3
+        background: $n1
+    &__head,
+    &__main
+        margin-bottom: 32px
+    &__main
+        text-align: center
+    &__line
+        display: flex
+        justify-content: center
+    &__top
+        text-align: center
+        margin-bottom: 32px 
+        +m
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: left
+    &__avatar
+        position: relative
+        flex-shrink: 0
+        img
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            object-fit: cover
+    &__line &__avatar
+        width: 64px
+        height: 64px
+        margin-right: 24px
+    &__top &__avatar,
+    &__main &__avatar
+        width: 160px
+        height: 160px
+        +m
+            width: 64px
+            height: 64px
+    &__top &__avatar
+        margin: 0 auto 24px
+        +m
+            margin: 0 20px 0 0
+    &__main &__avatar
+        margin: 0 auto 12px
+    &__check
+        position: absolute
+        top: 0
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        background: $p4
+        .icon
+            fill: $n8
+    &__line &__check
+        width: 24px
+        height: 24px
+        .icon
+            width: 12px
+            height: 12px
+    &__top &__check
+        width: 40px
+        height: 40px
+        +m
+            width: 24px
+            height: 24px
+        .icon
+            width: 16px
+            height: 16px
+            +m
+                width: 12px
+                height: 12px
+    &__update
+        display: inline-flex
+        align-items: center
+        margin-bottom: 24px
+        +caption-bold-2
+        color: $n4
+        transition: color .2s
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 8px
+            fill: $n4
+            transition: fill .2s
+        &:hover
+            color: $p1
+            .icon
+                fill: $p1
+    &__man
+        +dm-sans
+        font-size: 32px
+        line-height: (40/32)
+        letter-spacing: -.01em
+        +nl
+            margin-bottom: 8px
+    &__top &__man
+        +m
+            text-align: left
+    &__rating
+        display: inline-flex
+        align-items: center
+        +caption-2
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 8px
+            fill: $s3
+    &__number
+        font-weight: 500
+    &__reviews
+        margin-left: 8px
+        color: $n4
+    &__body
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__parameters
+        display: flex
+        justify-content: center
+        margin-bottom: 32px
+        padding: 8px 16px
+        border-radius: 20px
+        background: $n7
+        +dark
+            background: $n2
+    &__parameter
+        display: flex
+        align-items: center
+        color: $n4
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 6px
+            fill: $n4
+        &:not(:last-child)
+            margin-right: 12px
+    &__info
+        margin-bottom: 32px
+        text-align: center
+        color: $n4
+    &__site
+        display: inline-flex
+        align-items: center
+        margin-bottom: 32px
+        +button-2
+        color: $n2
+        +dark
+            color: $n8
+        .icon
+            width: 16px
+            height: 16px
+            margin-right: 8px
+            fill: $n4
+    &__control
+        display: inline-flex
+        margin-bottom: 32px
+    &__control &__button
+        margin-right: 8px 
+        +dark
+            box-shadow: inset 0 0 0 2px $n3
+            &:hover
+                background: $n3
+    &__socials
+        display: flex
+        justify-content: center
+    &__social
+        .icon
+            width: 20px
+            height: 20px
+            fill: $n4
+            transition: fill .2s
+        &:hover
+            .icon
+                fill: $p1
+        &:not(:last-child)
+            margin-right: 24px
+    &__note
+        position: relative
+        margin-top: 32px
+        padding-top: 32px
+        +caption-2
+        color: $n4
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            left: 50%
+            width: 200px
+            height: 1px
+            transform: translateX(-50%)
+            background: $n6
+            +dark
+                background: $n3
+        +dark
+            border-color: $n3
+    &__report
+        display: inline-flex
+        align-items: center
+        margin-top: 32px
+        +poppins
+        +caption-2
+        color: $n4
+        transition: color .2s
+        .icon
+            width: 12px
+            height: 12px
+            margin-right: 8px
+            fill: $n4
+            transition: fill .2s
+        &:hover
+            color: $p1
+            .icon
+                fill: $p1

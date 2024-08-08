@@ -1,0 +1,48 @@
+.services
+    &__head
+        margin-bottom: 92px
+        text-align: center
+        +t
+            margin-bottom: 64px
+        +m
+            margin-bottom: 48px
+    .stage
+        margin-bottom: 8px
+    &__title
+        margin-bottom: 32px
+        +m
+            font-size: 32px
+    &__list
+        display: flex
+        margin: 0 -12px
+        +t
+            display: block
+    &__item
+        flex: 0 0 calc(33.333% - 24px)
+        width: calc(33.333% - 24px)
+        margin: 0 12px
+        padding: 64px 32px
+        border-radius: 20px
+        background: $n7
+        +t
+            width: 100%
+            margin: 0
+        +m
+            padding: 48px 24px
+        +dark
+            background: $n2
+        &:not(:last-child)
+            +t
+                margin-bottom: 24px
+    &__icon
+        display: flex
+        align-items: center
+        height: 48px
+        margin-bottom: 32px
+        img
+            max-height: 100%
+    &__subtitle
+        margin-bottom: 16px
+        +body-bold-2
+    &__content
+        color: $n4

@@ -1,0 +1,62 @@
+---
+title: Fleet
+classFlights: active
+---
+extends layouts/layout
+block content
+	.section.main.main_flights
+		.main__center.center
+			.main__preview
+				picture
+					source(media="(max-width: 767px)" srcSet="img/content/main-pic-mobile-3.jpg")
+					img(src="img/content/main-pic-3.jpg" alt="Main")
+				.main__wrap
+					h1.main__title.hero Air, sleep, dream
+					.main__info.info Find and book a great experience.
+					a.button.main__button(href="flights-category.html") Start your search
+			.panel.panel_flights
+				.panel__background
+				.panel__nav
+					a.panel__link(href="index.html") Stays
+					a.panel__link.active(href="flights.html") Flights
+					a.panel__link(href="cars.html") Cars
+					a.panel__link(href="things-to-do.html") Things to do
+				.panel__controls
+					button.button-stroke.button-small.panel__button.active Round-trip
+					button.button-stroke.button-small.panel__button One-way
+					+guests
+				.panel__body
+					.panel__row
+						+location("", "marker", "Flying from", "Flying from")
+						+location("", "location", "Flying to", "Going to")
+						+daterange("", "ddd, MMM DD", "calendar", "Departure", "Return", "Departure", "Return")
+						a.panel__search(href="flights-category.html")
+							+i('search')
+							span Search
+	include partials/adventure
+	include partials/travel
+	.section.categories
+		.categories__center.center
+			.categories__inner
+				.categories__head
+					h2.categories__title.h2 Browse by category
+					.categories__info.info Let’s go on an adventure
+				.categories__wrapper
+					.categories__slider.js-slider-categories
+						mixin item(url, counter, icon, subtitle, content)
+							a.categories__item(href=url)
+								.status.categories__counter=counter
+								.categories__icon
+									+i(icon)
+								.categories__subtitle=subtitle 
+								.categories__content=content
+						+item("stays-category.html", "256.356", "building", "City house", "Small description")
+						+item("stays-category.html", "333.356", "building", "City house", "Small description")
+						+item("stays-category.html", "123.246", "building", "City house", "Small description")
+						+item("stays-category.html", "443.111", "building", "City house", "Small description")
+						+item("stays-category.html", "333.356", "building", "City house", "Small description")
+						+item("stays-category.html", "256.356", "building", "City house", "Small description")
+						+item("stays-category.html", "256.356", "building", "City house", "Small description")
+						+item("stays-category.html", "333.356", "building", "City house", "Small description")
+						+item("stays-category.html", "123.246", "building", "City house", "Small description")
+						+item("stays-category.html", "443.111", "building", "City house", "Small description")

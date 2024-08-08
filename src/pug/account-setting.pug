@@ -1,0 +1,240 @@
+---
+title: Fleet
+---
+extends layouts/layout
+block content
+	.section.setting.js-tabs
+		.setting__center.center
+			.setting__select.tablet-show
+				select.select.js-tabs-select
+					option Personal info
+					option Login and security
+					option Payments
+					option Notification
+			.setting__menu
+				a.setting__link.js-tabs-link.active(href="#")
+					+i('user')
+					| Personal info
+				a.setting__link.js-tabs-link(href="#")
+					+i('lock')
+					| Login and security
+				a.setting__link.js-tabs-link(href="#")
+					+i('credit-card')
+					| Payments
+				a.setting__link.js-tabs-link(href="#")
+					+i('bell')
+					| Notification
+			.setting__container
+				.setting__item.js-tabs-item
+					form.setting__form
+						.setting__head
+							h2.setting__title.h2 Personal info
+							a.button-stroke.button-small.setting__button(href="profile.html") View profile
+						.setting__list
+							.setting__section
+								.setting__category Account info
+								.setting__fieldset
+									.setting__row
+										.field
+											.field__label Display Name
+											.field__wrap
+												input.field__input(type="text" name="display-name" placeholder="Enter your display name" required)
+										.field
+											.field__label real name
+											.field__wrap
+												input.field__input(type="text" name="real-name" placeholder="Enter your real name" required)
+									.setting__row
+										.field
+											.field__label Phone
+											.field__wrap
+												input.field__input(type="tel" name="phone" placeholder="Phone number" required)
+										.field
+											.field__label email
+											.field__wrap
+												input.field__input(type="email" name="email" placeholder="Email" required)
+									.field
+										.field__label bio
+										.field__wrap
+											textarea.field__textarea(name="bio" placeholder="About yourself in a few words" required)
+									.setting__row
+										.field
+											.field__label lives in
+											.field__wrap
+												select.select
+													option Location
+													option USA
+													option Russia
+										.field
+											.field__label Speak
+											.field__wrap
+												select.select
+													option English (United States)
+													option Russian
+													option Chinese
+							.setting__section
+								.setting__category Social
+								.setting__fieldset
+									.setting__row
+										.field
+											.field__label website
+											.field__wrap
+												input.field__input(type="text" name="website" placeholder="Your site URL" required)
+										.field.field_button
+											.field__label twitter
+											.field__wrap
+												input.field__input(type="text" name="twitter" placeholder="@twitter username" required)
+												button.button-stroke.button-small.field__button Verify account
+						.setting__controls
+							button.button.setting__button Update profile
+							button.setting__clear
+								+i('close')
+								| Clear all
+				.setting__item.js-tabs-item
+					h2.setting__title.h2 Login and security
+					.setting__list
+						.setting__box
+							.setting__stage Login
+							.setting__element
+								.setting__details 
+									.setting__label Password
+									.setting__text Last updated 1 month ago
+								button.button-stroke.button-small.settings__button Update password
+						.setting__box
+							.setting__stage Social accounts
+							.setting__line
+								.setting__element
+									.setting__details 
+										.setting__label Facebook
+										.setting__text Not connected
+									button.button-stroke.button-small.settings__button Connect
+								.setting__element
+									.setting__details 
+										.setting__label Apple account
+										.setting__text Not connected
+									button.button-stroke.button-small.settings__button Connect
+						.setting__box
+							.setting__stage Device history
+							.setting__group
+								.setting__element
+									.setting__details 
+										.setting__label Session
+										.setting__text May 14, 2021 at 08:36pm
+									button.button-stroke.button-small.settings__button Log out device
+								.setting__element
+									.setting__details 
+										.setting__label macOs Big Sur. Chrome
+										.setting__text May 14, 2021 at 08:36pm
+									button.button-stroke.button-small.settings__button Log out device
+								.setting__element
+									.setting__details 
+										.setting__label Session
+										.setting__text May 14, 2021 at 08:36pm
+									button.button-stroke.button-small.settings__button Log out device
+				.setting__item.js-tabs-item
+					h2.setting__title.h2 Payment methods
+					form.setting__form
+						.setting__list
+							.setting__box
+								.setting__stage Credit card
+								.setting__element
+									.setting__details 
+										.setting__label Visa ••••••1667
+										.setting__text Expiration: 03/2026
+									button.button-small.settings__button Add payment method
+								.setting__top
+									.setting__category Add new credit card
+									.setting__cards
+										.setting__card
+											img(src="img/content/visa.svg" alt="Visa")
+										.setting__card
+											img(src="img/content/master-card.svg" alt="Master Card")
+								.setting__fieldset
+									.field
+										.field__label card number
+										.field__wrap
+											input.field__input(type="tel" name="card-number" placeholder="XXXX XXXX XXXX XXXX" required)
+									.field
+										.field__label card holder
+										.field__wrap
+											input.field__input(type="text" name="card-holder" placeholder="TRAN MAU TRI TAM" required)
+									.setting__row
+										.field
+											.field__label EXPIRATION DATE
+											.field__wrap
+												input.field__input(type="tel" name="date" placeholder="MM / YY" required)
+										.field
+											.field__label CVC
+											.field__wrap
+												input.field__input(type="tel" name="CVC" placeholder="CVC" required)
+									+checkbox('Save Card', true)
+							.setting__box
+								.setting__stage Coupons
+								.setting__line
+									.setting__element
+										.setting__details 
+											.setting__label Coupons
+											.setting__text No coupon added
+										button.button-stroke.button-small.settings__button Add
+									.setting__element
+										.setting__details 
+											.setting__label Gift credit
+											.setting__text No gift credit added
+										button.button-stroke.button-small.settings__button Add
+				.setting__item.js-tabs-item
+					h2.setting__title.h2 Notification setting
+					.setting__list
+						.setting__box
+							.setting__stage Messages
+							.setting__notification
+								.setting__main
+									.setting__subtitle Email
+									+switch(true)
+								.setting__content Recevice notifications via email
+							.setting__notification
+								.setting__main
+									.setting__subtitle Text messages
+									+switch
+								.setting__content Recevice notifications via mobile phone
+							.setting__notification
+								.setting__main
+									.setting__subtitle Browser notifications
+									+switch
+								.setting__content Recevice notifications of your browser
+						.setting__box
+							.setting__stage Promotions
+							.setting__notification
+								.setting__main
+									.setting__subtitle Email
+									+switch(true)
+								.setting__content Recevice notifications via email
+							.setting__notification
+								.setting__main
+									.setting__subtitle Text messages
+									+switch
+								.setting__content Recevice notifications via mobile phone
+							.setting__notification
+								.setting__main
+									.setting__subtitle Browser notifications
+									+switch
+								.setting__content Recevice notifications of your browser
+						.setting__box
+							.setting__stage Reminders
+							.setting__notification
+								.setting__main
+									.setting__subtitle Email
+									+switch(true)
+								.setting__content Recevice notifications via email
+							.setting__notification
+								.setting__main
+									.setting__subtitle Text messages
+									+switch
+								.setting__content Recevice notifications via mobile phone
+							.setting__notification
+								.setting__main
+									.setting__subtitle Browser notifications
+									+switch
+								.setting__content Recevice notifications of your browser
+
+
+
+								

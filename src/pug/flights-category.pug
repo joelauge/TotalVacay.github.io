@@ -1,0 +1,124 @@
+---
+title: Fleet
+classTestimonials: section-pd section-mb0 section-bg
+---
+extends layouts/layout
+block content
+	.section.main.main_flights-category
+		.main__bg
+			img(src="img/content/bg-flight-1.jpg" alt="Flight")
+		.main__center.center
+			.panel.panel_flights-category
+				.panel__background
+				.panel__controls
+					button.button-stroke.button-small.panel__button.active Round-trip
+					button.button-stroke.button-small.panel__button One-way
+					+guests
+				.panel__body
+					.panel__row
+						+location("location_small location_down", "marker", "Flying from", false)
+						+location("location_small location_down", "location", "Flying to", false)
+						+daterange("datepicker_small datepicker_down", "ddd, MMM DD", "calendar", "Departure", "Return", false, false)
+						button.panel__search
+							+i('search')
+							span Search
+	.section.flights
+		.flights__center.center
+			.control
+				a.button-stroke.button-small.control__button(href="flights.html")
+					+i('arrow-left')
+					span Go home
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="flights.html") Home
+					li.breadcrumbs__item Flights
+			.flights__sorting
+				.flights__select
+					select.select
+						option Recommended
+						option Popular
+						option In exchange
+				.flights__select.tablet-show
+					select.select
+						option Cheapest
+						option Best
+						option With transfers
+				.nav
+					a.nav__link.active(href="#") Cheapest
+					a.nav__link(href="#") Best
+					a.nav__link(href="#") With transfers
+				button.button-stroke.flights__button Advanced filter
+			.flights__row
+				.flights__filters
+					.flights__group
+						.flights__box
+							.range
+								.range__label Price range
+								.range__slider.js-slider(
+									data-min='1000'
+									data-max='5000'
+									data-start='3500'
+									data-step='50'
+									data-tooltips='true'
+									data-prefix='$')
+								.range__indicators
+									.range__text $1000
+									.range__text $5000
+						.flights__box
+							.range.range_time.js-range-time
+								.range__label Times
+								.range__info Take-off
+								.range__note South Island (SIZ)
+								.range__slider.js-range-slider(
+									data-from='4.5'
+									data-to='15')
+								.range__indicators
+									.range__text Fri <span class="js-range-start"></span>
+									.range__text <span class="js-range-finish"></span> PM
+							.range.range_time.js-range-time
+								.range__info Landing
+								.range__note South Island (SIZ)
+								.range__slider.js-range-slider(
+									data-from='6.5'
+									data-to='18')
+								.range__indicators
+									.range__text Fri <span class="js-range-start"></span>
+									.range__text <span class="js-range-finish"></span> PM
+							.range.range_time.js-range-time
+								.range__info Take-off
+								.range__note South Island (SIZ)
+								.range__slider.js-range-slider(
+									data-from='4.5'
+									data-to='15')
+								.range__indicators
+									.range__text Fri <span class="js-range-start"></span>
+									.range__text <span class="js-range-finish"></span> PM
+							.range.range_time.js-range-time
+								.range__info Landing
+								.range__note South Island (SIZ)
+								.range__slider.js-range-slider(
+									data-from='6.5'
+									data-to='18')
+								.range__indicators
+									.range__text Fri <span class="js-range-start"></span>
+									.range__text <span class="js-range-finish"></span> PM
+						.flights__box
+							.flights__variants
+								+checkbox("Nonstop", true, "$2,568")
+								+checkbox("1 stop", false, "$1,568")
+								+checkbox("2+ stops", false, "$768")
+					button.flights__reset
+						+i('close-circle-fill')
+						| Reset filter
+				.flights__container
+					.flights__list
+						+flight(true)
+						+flight(true)
+						+flight(true)
+						+flight(true)
+						+flight(true)
+					.flights__btns
+						button.button-stroke.flights__button
+							+loader
+							span Show more
+	include partials/testimonials

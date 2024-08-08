@@ -1,0 +1,288 @@
+.receipt
+    flex-shrink: 0 
+    width: 448px
+    padding: 32px
+    border: 1px solid $n6
+    background: $n8
+    box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.08)
+    border-radius: 24px
+    +d
+        width: 400px
+    +t
+        width: auto
+    +m
+        margin: 0 -16px
+        padding: 24px 16px
+    +dark
+        border: 1px solid $n3
+        background: $n2
+    &__head
+        display: flex
+        align-items: center
+        margin-bottom: 32px
+    &__head &__cost
+        display: flex
+        margin-bottom: 8px
+    &__old,
+    &__actual
+        +dm-sans
+        font-size: 32px
+        line-height: 40px
+        letter-spacing: -0.01em
+        font-weight: 700
+    &__old
+        margin-right: 12px
+        text-decoration: line-through 
+        color: $n5
+    &__note
+        position: relative
+        top: -2px
+        align-self: flex-end
+        margin-left: 9px
+        +body-2
+        color: $n4
+    &__avatar
+        position: relative
+        flex-shrink: 0
+        width: 64px
+        height: 64px
+        margin-left: auto
+        img
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            object-fit: cover
+    &__check
+        position: absolute
+        top: 0
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 24px
+        height: 24px
+        border-radius: 50%
+        background: $p4
+        .icon
+            width: 12px
+            height: 12px
+            fill: $n8
+    &__rating
+        display: flex
+        align-items: center
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 8px
+            fill: $s3
+    &__number
+        font-weight: 500
+    &__reviews
+        margin-left: 8px
+        color: $n4
+    &__description
+        margin-bottom: 32px
+        padding: 8px
+        border-radius: 20px
+        background: $n7
+        +m
+            padding: 0
+        +dark
+            background: $n3
+        &_flex
+            display: flex
+            flex-wrap: wrap
+            .receipt__item
+                flex: 0 0 50%
+                &:nth-child(2n)
+                    position: relative
+                    &:before
+                        content: ""
+                        position: absolute
+                        top: 12px
+                        left: 0
+                        bottom: 12px
+                        width: 1px
+                        background: $n6
+                        +dark
+                            background: $n4
+    &__item
+        display: flex
+        align-items: center
+        padding: 12px
+    &__icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 32px
+        height: 32px
+        margin-right: 12px
+        .icon
+            width: 24px
+            height: 24px
+            fill: $n5
+    &__category
+        +caption-2
+        color: $n4
+    &__subtitle
+        +body-bold-2
+    &__btns
+        display: flex
+        margin-bottom: 32px
+        .receipt__button
+            .icon
+                width: 16px
+                height: 16px
+                margin-left: 8px
+                &:nth-child(2)
+                    display: none
+                    width: 12px
+                    height: 12px
+                    margin-left: 12px
+                +nl
+                    margin-right: 0 
+            &.active
+                .icon
+                    &:first-child
+                        display: none
+                    &:nth-child(2)
+                        display: inline
+            &:first-child
+                flex-shrink: 0
+                margin-right: 8px
+            &:nth-child(2)
+                flex-grow: 1
+    &__stage
+        margin-bottom: 12px
+        +body-bold-1
+    &__table
+        margin-bottom: 32px
+    &__line
+        display: flex
+        padding: 8px 12px
+        &:last-child
+            background: $n7
+            border-radius: 8px
+            +dark
+                background: $n3
+            .receipt__cell
+                &:first-child
+                    color: $n2
+                    +dark
+                        color: $n8
+    &__cell
+        &:first-child
+            margin-right: auto
+            color: $n4
+        &:nth-child(2)
+            flex-shrink: 0
+            margin-left: 20px
+            text-align: right
+            font-weight: 500
+    &__offers
+        margin-bottom: 48px
+    &__offer
+        display: flex
+        align-items: center
+        &:not(:last-child)
+            margin-bottom: 24px
+        .receipt__button
+            width: 192px
+            color: $n4
+            +m
+                width: 180px
+                padding: 0 16px
+            .icon
+                width: 16px
+                height: 16px
+                fill: $n4
+            &:hover
+                background: $p1
+                box-shadow: inset 0 0 0 2px $p1
+                color: $n8
+                .icon
+                    fill: $n8
+                .receipt__money
+                    color: $n8
+    &__wrap
+        flex-grow: 1
+    &__date
+        +body-bold-2
+    &__time
+        +caption-2
+        color: $n4
+    &__money
+        color: $p4
+        transition: color .2s
+    &__settings
+        margin-bottom: 32px
+    &__setting
+        display: flex
+        align-items: center
+        &:not(:last-child)
+            margin-bottom: 24px
+            padding-bottom: 24px
+            border-bottom: 1px solid $n6
+            +dark
+                border-color: $n3
+    &__setting &__subtitle
+        margin-bottom: 8px
+    &__content
+        +caption-2
+        color: $n4 
+    .counter
+        flex-shrink: 0
+        width: 128px
+        height: 48px 
+        margin-left: 24px
+        padding: 0 12px
+        border-radius: 24px
+        box-shadow: inset 0 0 0 1px $n6
+        +dark
+            box-shadow: inset 0 0 0 1px $n3
+    &__foot
+        text-align: center
+    &__foot &__button
+        .icon
+            width: 16px
+            height: 16px
+    &__report
+        display: inline-flex
+        align-items: center
+        +poppins
+        +caption-2
+        color: $n4
+        transition: color .2s
+        .icon
+            width: 12px
+            height: 12px
+            margin-right: 8px
+            fill: $n4
+            transition: fill .2s
+        &:hover
+            color: $p1
+            .icon
+                fill: $p1
+    &__free
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 32px
+        +poppins
+        +caption-2
+        color: $n4
+        .icon
+            width: 12px
+            height: 12px
+            margin-right: 8px
+            fill: $n4
+    &__more
+        +button-1
+        color: $n2
+        transition: color .2s
+        &:hover
+            color: $p1
+        +dark
+            color: $n8
+            &:hover
+                color: $p1

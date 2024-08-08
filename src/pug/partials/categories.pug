@@ -1,0 +1,27 @@
+div(class=classCategories)
+	.categories__center.center
+		.categories__inner
+			.categories__head
+				h2.categories__title.h2=categoriesTitle 
+				.categories__info.info=categoriesInfo
+			.categories__wrapper
+				.categories__slider.js-slider-categories
+					mixin item(url, counter, icon, subtitle, content)
+						a.categories__item(href=url)
+							.status.categories__counter=counter
+							.categories__icon
+								+i(icon)
+							.categories__subtitle=subtitle 
+							.categories__content=content
+					+item("stays-category.html", "256.356", "building", "City house", "Small description")
+					+item("stays-category.html", "333.356", "building", "City house", "Small description")
+					+item("stays-category.html", "123.246", "building", "City house", "Small description")
+					+item("stays-category.html", "443.111", "building", "City house", "Small description")
+					+item("stays-category.html", "333.356", "building", "City house", "Small description")
+					+item("stays-category.html", "256.356", "building", "City house", "Small description")
+					+item("stays-category.html", "256.356", "building", "City house", "Small description")
+					+item("stays-category.html", "333.356", "building", "City house", "Small description")
+					+item("stays-category.html", "123.246", "building", "City house", "Small description")
+					+item("stays-category.html", "443.111", "building", "City house", "Small description")
+					
+

@@ -1,0 +1,33 @@
+.section.hosts
+	.hosts__center.center
+		.hosts__inner
+			.hosts__head
+				h2.hosts__title.h2 Best hosts of the
+				select.select-empty
+					option month
+					option year
+					option day
+			.hosts__wrapper
+				.hosts__slider.js-slider-hosts
+					mixin item(srcSet, src, rating, avatar)
+						a.hosts__item(href="host-profile.html")
+							.hosts__preview
+								img(srcSet=`${srcSet} 2x` src=src alt="Host")
+								.hosts__rating
+									+i('star')
+									=rating
+							.hosts__body
+								.hosts__avatar
+									img(src=avatar alt="Avatar")
+								.hosts__subtitle Antone Heller
+								.hosts__location Gaylordside
+					+item("img/content/host-pic-1.jpg", "img/content/host-pic-1@2x.jpg", "4.9", "img/content/host-avatar-1.jpg")
+					+item("img/content/host-pic-2.jpg", "img/content/host-pic-2@2x.jpg", "4.8", "img/content/host-avatar-2.jpg")
+					+item("img/content/host-pic-3.jpg", "img/content/host-pic-3@2x.jpg", "5.0", "img/content/host-avatar-3.jpg")
+					+item("img/content/host-pic-4.jpg", "img/content/host-pic-4@2x.jpg", "4.7", "img/content/host-avatar-4.jpg")
+					+item("img/content/host-pic-1.jpg", "img/content/host-pic-1@2x.jpg", "4.9", "img/content/host-avatar-1.jpg")
+					+item("img/content/host-pic-2.jpg", "img/content/host-pic-2@2x.jpg", "4.8", "img/content/host-avatar-2.jpg")
+					+item("img/content/host-pic-3.jpg", "img/content/host-pic-3@2x.jpg", "5.0", "img/content/host-avatar-3.jpg")
+					+item("img/content/host-pic-4.jpg", "img/content/host-pic-4@2x.jpg", "4.7", "img/content/host-avatar-4.jpg")
+					
+

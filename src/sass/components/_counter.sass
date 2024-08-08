@@ -1,0 +1,32 @@
+.counter
+    position: relative
+    display: flex
+    align-items: center
+    flex-shrink: 0 
+    width: 104px
+    height: 24px 
+    &__value
+        flex-grow: 1
+        padding: 0 12px
+        text-align: center
+        +body-bold-2 
+        user-select: none 
+    &__button
+        position: relative
+        top: -1px
+        flex-shrink: 0
+        width: 24px
+        .icon
+            width: 24px
+            height: 24px
+            fill: $n5
+            transition: fill .2s
+        &:hover
+            .icon
+                fill: $p1
+        &.disabled
+            pointer-events: none
+            .icon
+                fill: $n6
+                +dark
+                    fill: $n3

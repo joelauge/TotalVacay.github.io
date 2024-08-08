@@ -1,0 +1,32 @@
+div(class=classBest)
+	.best__center.center
+		.best__inner
+			.best__head
+				h2.best__title.h2=bestTitle 
+				.best__info.info=bestInfo
+			.best__wrapper
+				.best__slider.js-slider-best.js-slider-resize
+					mixin item(subtitle, location, avatar, rating, number, color)
+						a.best__item(href="host-profile.html")
+							.best__line
+								if number
+									.best__number(style=`background-color: ${color}`)=number
+								.best__rating
+									+i('star')
+									=rating
+							.best__avatar
+								img(src=avatar alt="Avatar")
+								.best__check
+									+i('check')
+							.best__subtitle=subtitle
+							.best__location=location
+					+item("Name Name", "Location", "img/content/avatar-1.jpg", "4.9", "#1", "#58C27D")
+					+item("Name Name", "Location", "img/content/avatar-2.jpg", "5.0", "#2", "#92A5EF")
+					+item("Name Name", "Location", "img/content/avatar-3.jpg", "4.8", "#3", "#8BC5E5")
+					+item("Name Name", "Location", "img/content/avatar-4.jpg", "4.4")
+					+item("Name Name", "Location", "img/content/avatar-5.jpg", "4.7")
+					+item("Name Name", "Location", "img/content/avatar-3.jpg", "4.9")
+					+item("Name Name", "Location", "img/content/avatar-1.jpg", "4.4")
+					+item("Name Name", "Location", "img/content/avatar-4.jpg", "4.75")
+					+item("Name Name", "Location", "img/content/avatar-2.jpg", "4.9")
+					

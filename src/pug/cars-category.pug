@@ -1,0 +1,129 @@
+---
+title: Fleet
+classCars: active
+---
+extends layouts/layout
+block content
+	.section-mb80.main.main_cars-category
+		.main__bg
+			img(src="img/content/bg-flight-1.jpg" alt="Main")
+		.main__center.center
+			.panel.panel_cars-category
+				.panel__background
+				.panel__controls
+					button.button-stroke.button-small.panel__button.active Return to same location
+					button.button-stroke.button-small.panel__button Return to same different location
+				.panel__body
+					.panel__row
+						+location("location_small location_down", "marker", "Pickup location")
+						+daterange("datepicker_small datepicker_down", "ddd, MMM DD", "calendar", "Check in", "Check out")
+						button.panel__search
+							+i('search')
+							span Search
+	.section.catalog
+		.sorting
+			.sorting__center.center
+				.control
+					a.button-stroke.button-small.control__button(href="cars.html")
+						+i('arrow-left')
+						span Go home
+					ul.breadcrumbs
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="index.html") Home
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="index.html") Stays
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="stays-category.html") New Zealand
+						li.breadcrumbs__item South Island
+				.sorting__body
+					.sorting__box
+						h2.sorting__title.h2 24 locations found
+						.sorting__line
+							.sorting__sale up to 25% off
+							.sorting__details May 1 - 14, 2 guests
+					.sorting__location
+						button.button-stroke.sorting__button.js-sorting-button
+							span Show map
+							+i('arrow-bottom')
+						.sorting__map.js-sorting-map
+							iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63817.0803287881!2d168.63234961382247!3d-45.04173987887954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d51df1d7a8de5f%3A0x500ef868479a600!2z0JrRg9C40L3RgdGC0LDRg9C9LCDQndC-0LLQsNGPINCX0LXQu9Cw0L3QtNC40Y8!5e0!3m2!1sru!2sua!4v1624887132616!5m2!1sru!2sua" width="600" height="450" loading="lazy")
+				.sorting__foot
+					.nav
+						a.nav__link.active(href="#") Sightseeing
+						a.nav__link(href="#") Transportation activities
+						a.nav__link(href="#") Art and culture
+					.sorting__select.tablet-show
+						select.select
+							option Sightseeing
+							option Transportation activities
+							option Art and culture
+					.sorting__select
+						select.select
+							option Time of day
+							option Time of week
+		.catalog__body
+			.catalog__center.center
+				.catalog__cards
+					+card("cars-product.html", "img/content/cars-pic-1@2x.jpg", "img/content/cars-pic-1.jpg", "category card__category", "popular", "London - Kings Cross", "/day", "$356", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$600 total", "4.8", "12", false, false, "card_row")
+					+card("cars-product.html", "img/content/cars-pic-2@2x.jpg", "img/content/cars-pic-2.jpg", false, "", "London - Kings Cross", "/day", "$234", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$1123 total", "4.9", "15", false, false, "card_row")
+					+card("cars-product.html", "img/content/cars-pic-3@2x.jpg", "img/content/cars-pic-3.jpg", false, "", "London - Kings Cross", "/day", "$456", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$756 total", "4.8", "125", false, false, "card_row")
+					+card("cars-product.html", "img/content/cars-pic-4@2x.jpg", "img/content/cars-pic-4.jpg", "category card__category", "popular", "London - Kings Cross", "/day", "$356", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$600 total", "4.8", "12", false, false, "card_row")
+					+card("cars-product.html", "img/content/cars-pic-5@2x.jpg", "img/content/cars-pic-5.jpg", false, "", "London - Kings Cross", "/day", "$234", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$1123 total", "4.9", "15", false, false, "card_row")
+					+card("cars-product.html", "img/content/cars-pic-6@2x.jpg", "img/content/cars-pic-6.jpg", false, "", "London - Kings Cross", "/day", "$456", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$756 total", "4.8", "125", false, false, "card_row")
+					+card("cars-product.html", "img/content/cars-pic-7@2x.jpg", "img/content/cars-pic-7.jpg", "category card__category", "popular", "London - Kings Cross", "/day", "$356", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$600 total", "4.8", "12", false, false, "card_row")
+					+card("cars-product.html", "img/content/cars-pic-8@2x.jpg", "img/content/cars-pic-8.jpg", false, "", "London - Kings Cross", "/day", "$234", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$1123 total", "4.9", "15", false, false, "card_row")
+					+card("cars-product.html", "img/content/cars-pic-9@2x.jpg", "img/content/cars-pic-9.jpg", false, "", "London - Kings Cross", "/day", "$456", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$756 total", "4.8", "125", false, false, "card_row")
+					+card("cars-product.html", "img/content/cars-pic-10@2x.jpg", "img/content/cars-pic-10.jpg", "category card__category", "popular", "London - Kings Cross", "/day", "$356", "route", "136 - 150, Pentonville Road, Kings Cross, London, UK", "user", "1 Supplier", "$600 total", "4.8", "12", false, false, "card_row")
+				.catalog__btns
+					button.button-stroke.catalog__button
+						+loader
+						span Show more
+	.section.browse
+		.browse__center.center
+			.browse__inner
+				.browse__head
+					h2.browse__title.h2 Explore nearby
+					.browse__info.info Let’s go on an adventure
+				.browse__wrapper
+					.browse__slider.js-slider-browse
+						mixin slide(srcSet, src, category, subtitle, content)
+							a.browse__card(href="stays-category.html")
+								.browse__preview
+									img(srcSet=`${srcSet} 2x` src=src alt="Card")
+									.status-black.browse__category=category
+								.browse__subtitle=subtitle 
+								.browse__content
+									+i('home')
+									=content
+						+slide("img/content/browse-pic-6.jpg", "img/content/browse-pic-6@2x.jpg", "20% off", "Nature house", "650,111")
+						+slide("img/content/browse-pic-7.jpg", "img/content/browse-pic-7@2x.jpg", "from $230", "Nature house", "664,423")
+						+slide("img/content/browse-pic-8.jpg", "img/content/browse-pic-8@2x.jpg", "30% off", "Nature house", "324,565")
+						+slide("img/content/browse-pic-9.jpg", "img/content/browse-pic-9@2x.jpg", "from $190", "Nature house", "443,879")
+						+slide("img/content/browse-pic-1.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Nature house", "650,111")
+						+slide("img/content/browse-pic-2.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Nature house", "664,423")
+						+slide("img/content/browse-pic-3.jpg", "img/content/browse-pic-3@2x.jpg", "20% off", "Nature house", "324,565")
+	.section.categories
+		.categories__center.center
+			.categories__inner
+				.categories__head
+					h2.categories__title.h2 Recommended pickup locations
+					.categories__info.info A lot of amazing experiences 🏝
+				.categories__wrapper
+					.categories__slider.js-slider-categories
+						mixin item(url, counter, icon, subtitle, content)
+							a.categories__item(href=url)
+								.status.categories__counter=counter
+								.categories__icon
+									+i(icon)
+								.categories__subtitle=subtitle 
+								.categories__content=content
+						+item("cars-category-2.html", "256", "car", "South Virgilland", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "33", "car", "Purdyhaven", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "123", "car", "Port Jarrett", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "43", "car", "New Kristian", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "73", "car", "Demetrisfort", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "11", "car", "South Virgilland", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "56", "car", "Purdyhaven", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "33", "car", "Port Jarrett", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "123", "car", "New Kristian", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "43", "car", "Demetrisfort", "From Rs. 1,461 per day")

@@ -1,0 +1,273 @@
+---
+title: Fleet
+classHeader: header_border
+---
+extends layouts/layout
+block content
+	.section-mb64.product
+		.product__center.center
+			.control
+				a.button-stroke.button-small.control__button(href="stays-category.html")
+					+i('arrow-left')
+					span Go home
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Home
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Stays
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="stays-category.html") New Zealand
+					li.breadcrumbs__item South Island
+			.product__head
+				.product__box
+					h2.product__title.h2 Premium milford sound tour ex queenstown
+					.product__line
+						.product__avatar
+							img(src="img/content/avatar-1.jpg" alt="Avatar")
+						.product__rating
+							+i('star')
+							.product__number 4.8
+							.product__reviews (256 reviews)
+						.product__options
+							.product__option
+								+i('user')
+								| Best tour guide
+							.product__option
+								+i('flag')
+								| Queenstown, Otago, New Zealand
+				+actions
+			.gallery
+				.gallery__list.gallery__list_tour
+					.gallery__preview
+						a.gallery__view(href="img/content/photo-4.1.jpg" data-fancybox="gallery" data-caption="Spectacular views of Queenstown")
+							img(src="img/content/photo-4.1.jpg" alt="Gallery")
+						a.button-white.button-small.gallery__button(href="full-photo-grid.html")
+							+i('image')
+							span Show all photos
+					a.gallery__preview(href="img/content/photo-4.2.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-4.2.jpg" alt="Gallery")
+					a.gallery__preview(href="img/content/photo-4.3.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-4.3.jpg" alt="Gallery")
+					a.gallery__preview(href="img/content/photo-4.4.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-4.4.jpg" alt="Gallery")
+					a.gallery__preview(href="img/content/photo-4.5.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-4.5.jpg" alt="Gallery")
+	.section.description
+		.description__center.center
+			.description__wrapper
+				h4.description__title.h4 Amazing Experience
+				.description__profile
+					span Hosted by
+					.description__avatar
+						img(src="img/content/avatar.jpg" alt="Avatar")
+					.description__name Colleen Jast
+				.description__list
+					.description__item
+						.description__icon(style="border-color: #92A5EF;")
+							+i('clock')
+						| 12 hours
+					.description__item
+						.description__icon(style="border-color: #8BC5E5;")
+							+i('glass')
+						| Includes food, drinks and tickets
+					.description__item
+						.description__icon(style="border-color: #FA8F54;")
+							+i('user')
+						| Up to 10 people
+					.description__item
+						.description__icon(style="border-color: #58C27D;")
+							+i('at')
+						| Hosted in English, Vietnamese
+				.description__group
+					.description__section
+						.description__content
+							h4 Activity
+							p The best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes van equipped with large panoramic windows, leather reclining seats, quirky on board videos, free wifi and complimentary bottled water. From your accommodation enjoy the stunning scenic drive
+						.description__full
+							.description__content.description__content_hide
+								p Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built, architectural house sitting proudly on Queenstown Hill.
+								p Enjoy breathtaking 180' views of Lake Wakatipu from your well appointed & privately accessed bedroom with modern en suite and floor-to-ceiling windows.
+							button.button-stroke.button-small.description__button Show more
+					.description__section
+						h4.description__title.h4 What’s included
+						.description__inner
+							.description__slider.js-slider-description
+								.description__slide(style="background-color: #E0EEF7;")
+									.description__preview
+										+i('pizza-slice')
+									.description__subtitle Food
+									.description__text Delicious picnic lunch. Please let us know if you have any dietary requirem...
+								.description__slide(style="background-color: #D3EEDC;")
+									.description__preview
+										+i('glass')
+									.description__subtitle Drinks
+									.description__text Delicious picnic lunch. Please let us know if you have any dietary requirem...
+								.description__slide(style="background-color: #fff4d9;")
+									.description__preview
+										+i('pizza-slice')
+									.description__subtitle Food
+									.description__text Delicious picnic lunch. Please let us know if you have any dietary requirem...
+								.description__slide(style="background-color: #D3EEDC;")
+									.description__preview
+										+i('glass')
+									.description__subtitle Drinks
+									.description__text Delicious picnic lunch. Please let us know if you have any dietary requirem...
+			.receipt
+				.receipt__head
+					.receipt__details
+						.receipt__cost
+							.receipt__old $119
+							.receipt__actual $102
+							.receipt__note /person
+						.receipt__rating
+							+i('star')
+							.receipt__number 4.8
+							.receipt__reviews (256 reviews)
+					.receipt__avatar
+						img(src="img/content/avatar.jpg" alt="Avatar")
+						.receipt__check
+							+i('check')
+				.receipt__description.receipt__description_flex
+					.receipt__item
+						.receipt__icon
+							+i('calendar')
+						.receipt__box
+							.receipt__category Date
+							.receipt__subtitle May 15, 2021
+					.receipt__item
+						.receipt__icon
+							+i('user')
+						.receipt__box
+							.receipt__category Guest
+							.receipt__subtitle 2 guests
+				.receipt__offers
+					.receipt__offer
+						.receipt__wrap
+							.receipt__date Wed, June 23
+							.receipt__time 7:30 AM - 7:30PM
+						a.button-stroke.receipt__button(href="checkout.html")
+							span.receipt__cost <span class="receipt__money">$256</span> / person
+							+i('bag')
+					.receipt__offer
+						.receipt__wrap
+							.receipt__date Wed, June 24
+							.receipt__time 7:30 AM - 7:30PM
+						a.button-stroke.receipt__button(href="checkout.html")
+							span.receipt__cost <span class="receipt__money">$102</span> / person
+							+i('bag')
+					.receipt__offer
+						.receipt__wrap
+							.receipt__date Wed, June 25
+							.receipt__time 7:30 AM - 7:30PM
+						a.button-stroke.receipt__button(href="checkout.html")
+							span.receipt__cost <span class="receipt__money">$45</span> / person
+							+i('bag')
+					.receipt__offer
+						.receipt__wrap
+							.receipt__date Wed, June 26
+							.receipt__time 7:30 AM - 7:30PM
+						a.button-stroke.receipt__button(href="checkout.html")
+							span.receipt__cost <span class="receipt__money">$231</span> / person
+							+i('bag')
+				.receipt__foot
+					a.receipt__more(href="#") See more dates
+	.section.comments
+		.comments__center.center
+			.profile
+				.profile__head
+					.profile__line
+						.profile__avatar
+							img(src="img/content/avatar.jpg" alt="Avatar")
+							.profile__check
+								+i('check')
+						.profile__details
+							.profile__man Zoe towne
+							.profile__rating
+								+i('star')
+								.profile__number 4.8
+								.profile__reviews (256 reviews)
+				.profile__body
+					.profile__parameters
+						.profile__parameter
+							+i('home')
+							| Superhost
+						.profile__parameter
+							+i('star-outline')
+							| 256 reviews
+					.profile__info Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built
+					a.profile__site(href="https://ui8.net" target="_blank")
+						+i('globe')
+						| https://ui8.net
+					.profile__control
+						a.button-stroke.button-small.profile__button(href="message-center.html") Contact
+						.actions.js-actions
+							.actions__item.actions__item_share.js-actions-item
+								button.button-circle-stroke.button-small.actions__button.js-actions-button
+									+i('share')
+								.actions__body.actions__body_up.js-actions-body
+									.actions__title Share link to this page
+									.actions__list.share-btn(data-url="https://ui8.net")
+										a.actions__link.btn-twitter(data-id="tw")
+											span
+												+i('twitter')
+										a.actions__link.btn-facebook(data-id="fb")
+											span
+												+i('facebook')
+					.profile__socials
+						a.profile__social(href="https://twitter.com/ui8" target="_blank")
+							+i('twitter')
+						a.profile__social(href="https://www.instagram.com/ui8net/" target="_blank")
+							+i('instagram')
+						a.profile__social(href="https://www.facebook.com/ui8.net/" target="_blank")
+							+i('facebook')
+					.profile__note Member since Mar 15, 2021
+					button.profile__report
+						+i('flag')
+						| Report this property
+			include partials/comment
+	.section.interest
+		.interest__center.center
+			.interest__head
+				.interest__category up to 25% off
+				h2.interest__title.h2 You may interested in
+				.nav
+					a.nav__link.active(href="#") Sightseeing
+					a.nav__link(href="#") Transportation activities
+					a.nav__link(href="#") Art and culture
+				.interest__select.mobile-show
+					select.select
+						option Sightseeing
+						option Transportation activities
+						option Art and culture
+			.interest__wrapper
+				.interest__slider.js-slider-interest
+					+card("product.html", "img/content/card-pic-5@2x.jpg", "img/content/card-pic-5.jpg", "category-blue card__category", "best selling", "Private landscape photography tour", "$356", "$267", "clock", "12 hours", "user", "Up to 10 people", "$200 total", "4.8", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-2.jpg")
+					+card("product.html", "img/content/card-pic-6@2x.jpg", "img/content/card-pic-6.jpg", "", false, "Private landscape photography tour", "$567", "$466", "clock", "24 hours", "user", "Up to 12 people", "$200 total", "4.9", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-3.jpg")
+					+card("product.html", "img/content/card-pic-7@2x.jpg", "img/content/card-pic-7.jpg", "category card__category", "popular", "Private landscape photography tour", "$234", "$198", "clock", "12 hours", "user", "Up to 18 people", "$200 total", "5.0", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-4.jpg")
+					+card("product.html", "img/content/card-pic-3@2x.jpg", "img/content/card-pic-3.jpg", "category-blue card__category", "best selling", "Private landscape photography tour", "$356", "$267", "clock", "12 hours", "user", "Up to 2 people", "$200 total", "4.6", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-1.jpg")
+					+card("product.html", "img/content/card-pic-4@2x.jpg", "img/content/card-pic-4.jpg", "category-blue card__category", "best selling", "Private landscape photography tour", "$300", "$250", "clock", "12 hours", "user", "Up to 10 people", "$200 total", "4.8", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-2.jpg")
+	.section.categories
+		.categories__center.center
+			.categories__inner
+				.categories__head
+					h2.categories__title.h2 Exploring in Queenstown
+					.categories__info.info A lot of amazing experiences 🏝
+				.categories__wrapper
+					.categories__slider.js-slider-categories
+						mixin item(url, counter, icon, subtitle, content)
+							a.categories__item(href=url)
+								.status.categories__counter=counter
+								.categories__icon
+									+i(icon)
+								.categories__subtitle=subtitle 
+								.categories__content=content
+						+item("category.html", "128", "building", "Sightseeing", "Small description")
+						+item("category.html", "54", "building", "Art & cutlture", "Small description")
+						+item("category.html", "326", "building", "Sightseeing", "Small description")
+						+item("category.html", "222", "building", "Art & cutlture", "Small description")
+						+item("category.html", "167", "building", "Sightseeing", "Small description")
+						+item("category.html", "56", "building", "Art & cutlture", "Small description")
+						+item("category.html", "128", "building", "Sightseeing", "Small description")
+						+item("category.html", "54", "building", "Art & cutlture", "Small description")
+						+item("category.html", "326", "building", "Sightseeing", "Small description")
+						+item("category.html", "222", "building", "Art & cutlture", "Small description")

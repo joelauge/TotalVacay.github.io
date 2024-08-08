@@ -1,0 +1,90 @@
+.wishlists
+    .control
+        margin-bottom: 32px
+        +m
+            margin-bottom: 24px
+    &__line
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 64px
+        +m
+            display: block
+            margin-bottom: 32px
+    &__box
+        +m
+            margin-bottom: 32px
+    &__details
+        margin-bottom: 64px
+        +m
+            margin-bottom: 32px
+    &__title
+        margin-bottom: 12px
+    &__center > &__title
+        margin-bottom: 64px
+        +m
+            margin-bottom: 32px
+    &__counter
+        +body-bold-2
+        color: $n4
+    &__sorting
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 64px
+        +m
+            display: block
+            margin-bottom: 32px
+    &__sorting &__select
+        &:not(:last-child)
+            +m
+                margin-bottom: 12px 
+    .nav
+        +t
+            display: none
+    &__item
+        display: none
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin: -32px -16px 0
+        +m
+            display: block
+            margin: 0
+    &__list .card
+        flex: 0 0 calc(33.333% - 32px)
+        width: calc(33.333% - 32px)
+        margin: 32px 16px 0
+        +t
+            flex: 0 0 calc(50% - 32px)
+            width: calc(50% - 32px)
+        +m
+            width: 100%
+            margin: 32px 0 0
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        margin: -32px -16px 0
+        +m
+            display: block
+            margin: 0
+    &__wrap .card
+        flex: 0 0 calc(50% - 32px)
+        width: calc(50% - 32px)
+        margin: 32px 16px 0
+        +m
+            width: 100%
+            margin: 32px 0 0
+    &__btns
+        margin-top: 48px
+        text-align: center
+        +m
+            margin-top: 32px
+    &__btns &__button
+        .loader
+            margin: 0 16px 0 2px
+            transform: scale(.8)
+    &__group
+        .flight
+            +nl
+                margin-bottom: 24px

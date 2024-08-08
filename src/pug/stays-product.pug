@@ -1,0 +1,269 @@
+---
+title: Fleet
+classHeader: header_border
+classStays: active
+---
+extends layouts/layout
+block content
+	.section-mb64.product
+		.product__center.center
+			.control
+				a.button-stroke.button-small.control__button(href="stays-category.html")
+					+i('arrow-left')
+					span Go home
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Home
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Stays
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="stays-category.html") New Zealand
+					li.breadcrumbs__item South Island
+			.product__head
+				.product__box
+					h2.product__title.h2 Spectacular views of Queenstown
+					.product__line
+						.product__avatar
+							img(src="img/content/avatar-1.jpg" alt="Avatar")
+						.product__rating
+							+i('star')
+							.product__number 4.8
+							.product__reviews (256 reviews)
+						.product__options
+							.product__option
+								+i('home')
+								| Superhost
+							.product__option
+								+i('flag')
+								| Queenstown, Otago, New Zealand
+				+actions
+			.gallery
+				.gallery__list.gallery__list_stays
+					.gallery__preview
+						a.gallery__view(href="img/content/photo-1.1.jpg" data-fancybox="gallery" data-caption="Spectacular views of Queenstown")
+							img(src="img/content/photo-1.1.jpg" alt="Gallery")
+						a.button-white.button-small.gallery__button(href="full-photo-grid.html")
+							+i('image')
+							span Show all photos
+					a.gallery__preview(href="img/content/photo-1.2.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-1.2.jpg" alt="Gallery")
+					a.gallery__preview(href="img/content/photo-1.3.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-1.3.jpg" alt="Gallery")
+					a.gallery__preview(href="img/content/photo-1.4.jpg" data-fancybox="gallery")
+						img(src="img/content/photo-1.4.jpg" alt="Gallery")
+	.section.description
+		.description__center.center
+			.description__wrapper
+				h4.description__title.h4 Private room in house
+				.description__profile
+					span Hosted by
+					.description__avatar
+						img(src="img/content/avatar.jpg" alt="Avatar")
+					.description__name Zoe Towne
+				.description__parameters
+					.description__parameter
+						+i('home')
+						| 2 guests
+					.description__parameter
+						+i('flag')
+						| 1 bedroom
+					.description__parameter
+						+i('flag')
+						| 1 private bath
+				.description__content
+					p Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built, architectural house sitting proudly on Queenstown Hill.
+					p Enjoy breathtaking 180' views of Lake Wakatipu from your well appointed & privately accessed bedroom with modern en suite and floor-to-ceiling windows.
+					p Your private patio takes in the afternoon sun, letting you soak up unparalleled lake and mountain views by day and the stars & city lights by night.
+				.description__info Amenities
+				.description__options
+					.description__option
+						+i('modem')
+						| Free wifi 24/7
+					.description__option
+						+i('toilet-paper')
+						| Free clean bathroom
+					.description__option
+						+i('monitor')
+						| Free computer
+					.description__option
+						+i('burger')
+						| Breakfast included
+					.description__option
+						+i('medical-case')
+						| Free wifi 24/7
+					.description__option
+						+i('credit-card')
+						| ATM
+					.description__option
+						+i('modem')
+						| Free wifi 24/7
+					.description__option
+						+i('building')
+						| Nearby city
+				.description__full
+					.description__content.description__content_hide
+						p Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built, architectural house sitting proudly on Queenstown Hill.
+						p Enjoy breathtaking 180' views of Lake Wakatipu from your well appointed & privately accessed bedroom with modern en suite and floor-to-ceiling windows.
+					button.button-stroke.button-small.description__button More detail
+			.receipt
+				.receipt__head
+					.receipt__details
+						.receipt__cost
+							.receipt__old $119
+							.receipt__actual $109
+							.receipt__note /night
+						.receipt__rating
+							+i('star')
+							.receipt__number 4.8
+							.receipt__reviews (256 reviews)
+					.receipt__avatar
+						img(src="img/content/avatar.jpg" alt="Avatar")
+						.receipt__check
+							+i('check')
+				.receipt__description.receipt__description_flex
+					.receipt__item
+						.receipt__icon
+							+i('calendar')
+						.receipt__box
+							.receipt__category Check-in
+							.receipt__subtitle May 15, 2021
+					.receipt__item
+						.receipt__icon
+							+i('calendar')
+						.receipt__box
+							.receipt__category Check-out
+							.receipt__subtitle May 22, 2021
+					.receipt__item
+						.receipt__icon
+							+i('user')
+						.receipt__box
+							.receipt__category Guest
+							.receipt__subtitle 2 guests
+				.receipt__btns
+					button.button-stroke.receipt__button
+						span Save
+						span
+							+i('plus')
+							+i('check')
+					a.button.receipt__button(href="stays-checkout.html")
+						span Reserve
+						+i('bag')
+				.receipt__table
+					.receipt__line
+						.receipt__cell $119 x 7 nights
+						.receipt__cell $833
+					.receipt__line
+						.receipt__cell 10% campaign discount
+						.receipt__cell -$125
+					.receipt__line
+						.receipt__cell Service fee
+						.receipt__cell $103
+					.receipt__line
+						.receipt__cell Total
+						.receipt__cell $833
+				.receipt__foot
+					button.receipt__report
+						+i('flag')
+						| Report this property
+	.section.comments
+		.comments__center.center
+			.profile
+				.profile__head
+					.profile__line
+						.profile__avatar
+							img(src="img/content/avatar.jpg" alt="Avatar")
+							.profile__check
+								+i('check')
+						.profile__details
+							.profile__man Zoe towne
+							.profile__rating
+								+i('star')
+								.profile__number 4.8
+								.profile__reviews (256 reviews)
+				.profile__body
+					.profile__parameters
+						.profile__parameter
+							+i('home')
+							| Superhost
+						.profile__parameter
+							+i('star-outline')
+							| 256 reviews
+					.profile__info Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built
+					a.profile__site(href="https://ui8.net" target="_blank")
+						+i('globe')
+						| https://ui8.net
+					.profile__control
+						a.button-stroke.button-small.profile__button(href="message-center.html") Contact
+						.actions.js-actions
+							.actions__item.actions__item_share.js-actions-item
+								button.button-circle-stroke.button-small.actions__button.js-actions-button
+									+i('share')
+								.actions__body.actions__body_up.js-actions-body
+									.actions__title Share link to this page
+									.actions__list.share-btn(data-url="https://ui8.net")
+										a.actions__link.btn-twitter(data-id="tw")
+											span
+												+i('twitter')
+										a.actions__link.btn-facebook(data-id="fb")
+											span
+												+i('facebook')
+					.profile__socials
+						a.profile__social(href="https://twitter.com/ui8" target="_blank")
+							+i('twitter')
+						a.profile__social(href="https://www.instagram.com/ui8net/" target="_blank")
+							+i('instagram')
+						a.profile__social(href="https://www.facebook.com/ui8.net/" target="_blank")
+							+i('facebook')
+					.profile__note Member since Mar 15, 2021
+					button.profile__report
+						+i('flag')
+						| Report this property
+			include partials/comment
+	.section.browse
+		.browse__center.center
+			.browse__inner
+				.browse__head
+					h2.browse__title.h2 Browse by property type
+					.browse__info.info Let’s go on an adventure
+				.browse__wrapper
+					.browse__slider.js-slider-browse
+						mixin slide(srcSet, src, category, subtitle, content)
+							a.browse__card(href="stays-category.html")
+								.browse__preview
+									img(srcSet=`${srcSet} 2x` src=src alt="Card")
+									.status-black.browse__category=category
+								.browse__subtitle=subtitle 
+								.browse__content
+									+i('home')
+									=content
+						+slide("img/content/browse-pic-5.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Nature house", "650,111")
+						+slide("img/content/browse-pic-6.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Nature house", "664,423")
+						+slide("img/content/browse-pic-7.jpg", "img/content/browse-pic-3@2x.jpg", "30% off", "Nature house", "324,565")
+						+slide("img/content/browse-pic-8.jpg", "img/content/browse-pic-4@2x.jpg", "from $190", "Nature house", "443,879")
+						+slide("img/content/browse-pic-5.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Nature house", "650,111")
+						+slide("img/content/browse-pic-6.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Nature house", "664,423")
+						+slide("img/content/browse-pic-7.jpg", "img/content/browse-pic-3@2x.jpg", "20% off", "Nature house", "324,565")
+	include partials/newsletter
+	.section.browse
+		.browse__center.center
+			.browse__inner
+				.browse__head.browse__head_small
+					h4.browse__title.h4 Explore mountains in New Zealand
+				.browse__wrapper
+					.browse__slider.js-slider-browse
+						mixin slide(srcSet, src, category, subtitle, content)
+							a.browse__card(href="stays-category.html")
+								.browse__preview
+									img(srcSet=`${srcSet} 2x` src=src alt="Card")
+									.status-black.browse__category=category
+								.browse__subtitle=subtitle 
+								.browse__content
+									+i('home')
+									=content
+						+slide("img/content/browse-pic-5.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Mountain house", "650,111")
+						+slide("img/content/browse-pic-6.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Mountain house", "664,423")
+						+slide("img/content/browse-pic-7.jpg", "img/content/browse-pic-3@2x.jpg", "30% off", "Mountain house", "324,565")
+						+slide("img/content/browse-pic-8.jpg", "img/content/browse-pic-4@2x.jpg", "from $190", "Mountain house", "443,879")
+						+slide("img/content/browse-pic-5.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Mountain house", "650,111")
+						+slide("img/content/browse-pic-6.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Mountain house", "664,423")
+						+slide("img/content/browse-pic-7.jpg", "img/content/browse-pic-3@2x.jpg", "20% off", "Mountain house", "324,565")

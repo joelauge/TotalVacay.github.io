@@ -1,0 +1,87 @@
+---
+title: Fleet
+classHeader: header_border header_wide
+classMessages: active
+footer: true
+---
+extends layouts/layout
+block content
+	.messages
+		.messages__users
+			button.messages__toggle
+				+i('arrow-prev')
+				| Messages center
+			.messages__group
+				mixin item(avatar, man, rating, classActive)
+					a.messages__item(href="#" class=classActive)
+						.messages__avatar
+							img(src=avatar alt="Avatar")
+						.messages__details
+							.messages__head
+								.messages__man=man
+								.messages__rating
+									+i('star')
+									=rating
+							.messages__date 12 May, 2021
+							.messages__content Thanks. It means a lot to me. Thanks. It means a lot to me...
+				+item("img/content/avatar-1.jpg", "Antone Heller", "4.9", "active")
+				+item("img/content/avatar-2.jpg", "Jessyca Klocko", "5.0")
+				+item("img/content/avatar-3.jpg", "Alanna Nader", "4.0")
+				+item("img/content/avatar-4.jpg", "Monty Schmeler", "4.9")
+		.messages__wrapper
+			.messages__inner
+				button.messages__back
+					+i('arrow-prev')
+					| Host
+				.messages__date May 12, 2021
+				.messages__list
+					.messages__author
+						.messages__avatar
+							img(src="img/content/avatar-1.jpg" alt="Avatar")
+						.messages__text Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love... 😊
+					.messages__time 7:37 PM
+					.messages__text Hello, how are you doing?
+					.messages__text I would like to ask something.
+					.messages__author
+						.messages__avatar
+							img(src="img/content/avatar-1.jpg" alt="Avatar")
+						.messages__text Hi John, how are you?
+			+subscription("email", "email", "Enter your email", "arrow-next")
+		.place
+			.place__wrapper
+				.place__preview
+					img(srcSet="img/content/location-photo@2x.jpg" src="img/content/location-photo.jpg" alt="Spectacular views of Queenstown")
+					a.button-white.button-small.place__button(href="full-photo-grid.html")
+						+i('image')
+						span Show all photos
+				.place__body
+					.place__title Spectacular views of Queenstown
+					.place__profile
+						span Hosted by
+						.place__avatar
+							img(src="img/content/avatar-1.jpg" alt="Avatar")
+						.place__name Zoe Towne
+					.place__description.place__description_flex 
+						.place__item
+							.place__icon
+								+i('calendar')
+							.place__box
+								.place__category Date
+								.place__subtitle May 15, 2021
+						.place__item
+							.place__icon
+								+i('user')
+							.place__box
+								.place__category Guest
+								.place__subtitle 2 guests
+					.place__parameters
+						.place__parameter
+							+i('flag')
+							| 1 bedroom
+						.place__parameter
+							+i('flag')
+							| 1 private bath
+					.place__text Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love...
+					a.button-stroke.button-small.place__button(href="stays-product.html") View detail
+
+

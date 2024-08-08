@@ -1,0 +1,123 @@
+---
+title: Fleet
+classBookings: active
+classHeader: header_border
+---
+extends layouts/layout
+block content
+	.section.wishlists.js-tabs
+		.wishlists__center.center
+			.control
+				a.button-stroke.button-small.control__button(href="index.html")
+					+i('arrow-left')
+					span Go home
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Home
+					li.breadcrumbs__item Bookings
+			.wishlists__details
+				h2.wishlists__title.h2 Bookings
+				.wishlists__counter You added 8 items to wishlists
+			.wishlists__sorting
+				.nav
+					a.nav__link.js-tabs-link.active(href="#") Stays
+					a.nav__link.js-tabs-link(href="#") Flights
+					a.nav__link.js-tabs-link(href="#") Cars
+					a.nav__link.js-tabs-link(href="#") Things to do
+				.sorting__select.tablet-show
+					select.select.js-tabs-select
+						option Stays
+						option Flights
+						option Cars
+						option Things to do
+				.sorting__select
+					select.select
+						option Upcoming
+						option Future
+						option Past
+			.wishlists__container
+				.wishlists__item.js-tabs-item
+					.wishlists__list
+						+card("stays-product.html", "img/content/card-pic-1@2x.jpg", "img/content/card-pic-1.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$200 total", "4.8", "12")
+						+card("stays-product.html", "img/content/card-pic-2@2x.jpg", "img/content/card-pic-2.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$234", "$123", "modem", "Free wifi", "burger", "Breakfast included", "$123 total", "4.9", "15")
+						+card("stays-product.html", "img/content/card-pic-3@2x.jpg", "img/content/card-pic-3.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$456", "$401", "modem", "Free wifi", "burger", "Breakfast included", "$456 total", "4.8", "125")
+						+card("stays-product.html", "img/content/card-pic-4@2x.jpg", "img/content/card-pic-4.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$111", "$97", "modem", "Free wifi", "burger", "Breakfast included", "$222 total", "5.0", "52")
+						+card("stays-product.html", "img/content/card-pic-5@2x.jpg", "img/content/card-pic-5.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$42 total", "4.6", "55")
+						+card("stays-product.html", "img/content/card-pic-6@2x.jpg", "img/content/card-pic-6.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$222", "$111", "modem", "Free wifi", "burger", "Breakfast included", "$111 total", "4.5", "122")
+					.wishlists__btns
+						button.button-stroke.wishlists__button
+							+loader
+							span Show more
+				.wishlists__item.js-tabs-item
+					.wishlists__group
+						+flight(true)
+						+flight(true)
+						+flight(true)
+				.wishlists__item.js-tabs-item
+					.wishlists__list
+						+card("cars-product.html", "img/content/cars-photo-1@2x.jpg", "img/content/cars-photo-1.jpg", "category card__category", "excellent", "Vauxhall Corsa", "/DAY", "$267", "route", "London - Kings Cross", false, false, "$200 total", "4.8", "12", false, fasle, "card_car")
+						+card("cars-product.html", "img/content/cars-photo-2@2x.jpg", "img/content/cars-photo-2.jpg", false, "", "Vauxhall Corsa", "/DAY", "$123", "route", "London - Kings Cross", false, false, "$123 total", "4.9", "15", false, fasle, "card_car")
+						+card("cars-product.html", "img/content/cars-photo-3@2x.jpg", "img/content/cars-photo-3.jpg", false, "", "Vauxhall Corsa", "/DAY", "$401", "route", "London - Kings Cross", false, false, "$456 total", "4.8", "125", false, fasle, "card_car")
+						+card("cars-product.html", "img/content/cars-photo-4@2x.jpg", "img/content/cars-photo-4.jpg", "category card__category", "excellent", "Vauxhall Corsa", "/DAY", "$267", "route", "London - Kings Cross", false, false, "$200 total", "4.8", "12", false, fasle, "card_car")
+						+card("cars-product.html", "img/content/cars-photo-5@2x.jpg", "img/content/cars-photo-5.jpg", false, "", "Vauxhall Corsa", "/DAY", "$123", "route", "London - Kings Cross", false, false, "$123 total", "4.9", "15", false, fasle, "card_car")
+						+card("cars-product.html", "img/content/cars-photo-6@2x.jpg", "img/content/cars-photo-6.jpg", false, "", "Vauxhall Corsa", "/DAY", "$401", "route", "London - Kings Cross", false, false, "$456 total", "4.8", "125", false, fasle, "card_car")
+					.wishlists__btns
+						button.button-stroke.wishlists__button
+							+loader
+							span Show more
+				.wishlists__item.js-tabs-item
+					.wishlists__list
+						+card("product.html", "img/content/card-pic-5@2x.jpg", "img/content/card-pic-5.jpg", "category-blue card__category", "best selling", "Private landscape photography tour", "$356", "$267", "clock", "12 hours", "user", "Up to 10 people", "$200 total", "4.8", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-2.jpg")
+						+card("product.html", "img/content/card-pic-6@2x.jpg", "img/content/card-pic-6.jpg", "", false, "Private landscape photography tour", "$567", "$466", "clock", "24 hours", "user", "Up to 12 people", "$200 total", "4.9", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-3.jpg")
+						+card("product.html", "img/content/card-pic-7@2x.jpg", "img/content/card-pic-7.jpg", "category card__category", "popular", "Private landscape photography tour", "$234", "$198", "clock", "12 hours", "user", "Up to 18 people", "$200 total", "5.0", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-4.jpg")
+						+card("product.html", "img/content/card-pic-3@2x.jpg", "img/content/card-pic-3.jpg", "category-blue card__category", "best selling", "Private landscape photography tour", "$356", "$267", "clock", "12 hours", "user", "Up to 2 people", "$200 total", "4.6", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-1.jpg")
+						+card("product.html", "img/content/card-pic-4@2x.jpg", "img/content/card-pic-4.jpg", "category-blue card__category", "best selling", "Private landscape photography tour", "$300", "$250", "clock", "12 hours", "user", "Up to 10 people", "$200 total", "4.8", "12", "The best 16 passenger small group, intimate and unique, Milford Sound...", "img/content/avatar-2.jpg")
+	.section.browse
+		.browse__center.center
+			.browse__inner
+				.browse__head
+					h2.browse__title.h2 You may also like
+					.browse__info.info Let’s go on an adventure
+				.browse__wrapper
+					.browse__slider.js-slider-browse
+						mixin slide(srcSet, src, category, subtitle, content)
+							a.browse__card(href="stays-category.html")
+								.browse__preview
+									img(srcSet=`${srcSet} 2x` src=src alt="Card")
+									.status-black.browse__category=category
+								.browse__subtitle=subtitle 
+								.browse__content
+									+i('home')
+									=content
+						+slide("img/content/browse-pic-1.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Nature house", "650,111")
+						+slide("img/content/browse-pic-2.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Nature house", "664,423")
+						+slide("img/content/browse-pic-3.jpg", "img/content/browse-pic-3@2x.jpg", "30% off", "Nature house", "324,565")
+						+slide("img/content/browse-pic-4.jpg", "img/content/browse-pic-4@2x.jpg", "from $190", "Nature house", "443,879")
+						+slide("img/content/browse-pic-1.jpg", "img/content/browse-pic-1@2x.jpg", "20% off", "Nature house", "650,111")
+						+slide("img/content/browse-pic-2.jpg", "img/content/browse-pic-2@2x.jpg", "from $230", "Nature house", "664,423")
+						+slide("img/content/browse-pic-3.jpg", "img/content/browse-pic-3@2x.jpg", "20% off", "Nature house", "324,565")
+	.section.categories
+		.categories__center.center
+			.categories__inner
+				.categories__head
+					h2.categories__title.h2 Browse by category
+					.categories__info.info Let’s go on an adventure
+				.categories__wrapper
+					.categories__slider.js-slider-categories
+						mixin item(url, counter, icon, subtitle, content)
+							a.categories__item(href=url)
+								.status.categories__counter=counter
+								.categories__icon
+									+i(icon)
+								.categories__subtitle=subtitle 
+								.categories__content=content
+						+item("stays-category.html", "256.356", "building", "City house", "Small description")
+						+item("stays-category.html", "333.356", "building", "City house", "Small description")
+						+item("stays-category.html", "123.246", "building", "City house", "Small description")
+						+item("stays-category.html", "443.111", "building", "City house", "Small description")
+						+item("stays-category.html", "333.356", "building", "City house", "Small description")
+						+item("stays-category.html", "256.356", "building", "City house", "Small description")
+						+item("stays-category.html", "256.356", "building", "City house", "Small description")
+						+item("stays-category.html", "333.356", "building", "City house", "Small description")
+						+item("stays-category.html", "123.246", "building", "City house", "Small description")
+						+item("stays-category.html", "443.111", "building", "City house", "Small description")

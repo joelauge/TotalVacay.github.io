@@ -1,0 +1,213 @@
+.complete
+    .control
+        margin-bottom: 80px
+        +t
+            margin-bottom: 64px
+        +m
+            margin-bottom: 24px
+    &__row
+        display: flex
+        align-items: flex-start
+        margin: 0 -16px
+        +t
+            display: block
+            margin: 0
+    &__col
+        flex: 0 0 calc(50% - 32px)
+        width: calc(50% - 32px)
+        margin: 0 16px
+        +t
+            width: 100%
+            margin: 0
+        &:nth-child(2)
+            padding-left: 48px
+            +d
+                padding-left: 0
+        &:not(:last-child)
+            +t
+                margin-bottom: 48px
+            +m
+                margin-bottom: 32px
+    &__wrapper
+        margin: 0 -16px
+    &__slider
+        padding-bottom: 64px
+        visibility: hidden
+        &.slick-initialized
+            visibility: visible
+    &__preview
+        img
+            width: 100%
+            object-fit: cover
+            border-radius: 16px
+            +t
+                height: 600px
+            +m
+                height: 300px
+    &__head
+        margin-bottom: 24px
+        padding-bottom: 24px
+        border-bottom: 1px solid $n6
+        +dark
+            border-color: $n2
+    &__title
+        margin-bottom: 4px
+    &__info
+        margin-bottom: 32px
+        +body-2
+        color: $n4
+    &__subtitle
+        margin-bottom: 8px
+        +body-bold-2
+    &__author
+        display: flex
+        align-items: center
+        span
+            +caption-2
+            color: $n4
+    &__avatar
+        flex-shrink: 0
+        width: 24px
+        height: 24px
+        margin: 0 8px 0 4px 
+        img
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            object-fit: cover
+    &__man
+        +caption-bold-2
+    &__line
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        margin-bottom: 32px
+    &__rating
+        display: flex
+        align-items: center
+        +m
+            flex-wrap: wrap
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 8px
+            fill: $s3
+    &__number
+        font-weight: 500
+    &__reviews
+        margin-left: 8px
+        color: $n4
+    &__parameters
+        display: flex
+        flex-wrap: wrap
+        margin-left: 24px
+        +m
+            flex: 0 0 100%
+            margin: 16px 0 0
+    &__parameter
+        +caption-2
+        color: $n4
+        .icon
+            width: 16px
+            height: 16px
+            margin-right: 8px
+            fill: $n4
+        &:not(:last-child)
+            margin-right: 20px
+    &__list
+        display: flex
+        margin-bottom: 32px
+        +m
+            display: block
+    &__item
+        display: flex
+        align-items: center
+        flex: 0 0 50%
+        &:first-child
+            padding-right: 24px
+            +m
+                padding-right: 0
+        &:not(:last-child)
+            +m
+                margin-bottom: 16px
+    &__icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        margin-right: 16px
+        border-radius: 50%
+        border-width: 2px
+        border-style: solid
+        .icon
+            width: 24px
+            height: 24px
+            fill: $n2
+            +dark
+                fill: $n8
+    &__category
+        +caption-2
+        color: $n4
+    &__value
+        +body-bold-2
+    &__stage
+        margin-bottom: 32px
+        +body-bold-1
+    &__table
+        margin-bottom: 32px
+    &__flex
+        display: flex
+        align-items: center
+        &:not(:last-child)
+            margin-bottom: 20px
+    &__cell
+        flex: 0 0 50%
+        +m
+            flex: 0 0 auto
+        &:first-child
+            display: flex
+            align-items: center
+            padding-right: 24px
+            color: $n4
+            +m
+                margin-right: auto
+            .icon
+                width: 20px
+                height: 20px
+                margin-right: 12px
+                fill: $n4
+        &:nth-child(2)
+            font-weight: 500
+    &__btns
+        display: flex
+    &__btns &__button
+            +m
+                padding: 0 16px
+            &:not(:last-child)
+                margin-right: 12px
+    .slick-slide
+        margin: 0 16px
+        opacity: 0
+        visibility: hidden
+        transition: all .4s
+        &.slick-active
+            opacity: 1
+            visibility: visible
+    .slick-arrow
+       bottom: 0
+    .slick-prev
+        left: calc(50% - 44px)
+    .slick-next
+        right: calc(50% - 44px)
+    &_tasks &__row
+        +t
+            display: flex
+            flex-direction: column-reverse
+    &_tasks &__col
+        +nl
+            +t
+                margin: 48px 0 0
+            +m
+                margin: 32px 0 0 
+

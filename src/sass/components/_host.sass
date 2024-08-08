@@ -1,0 +1,124 @@
+.host
+    &__photo
+        margin: 0 -80px
+        +d
+            margin: 0 -40px
+        +t
+            display: none
+        img
+            width: 100%
+            border-radius: 24px
+    &__row
+        display: flex
+        align-items: flex-start
+        +t
+            display: block
+    .profile
+        position: relative
+        z-index: 3
+        flex-shrink: 0
+        width: 352px
+        margin-top: -125px
+        +d
+            width: 300px
+            padding: 32px 16px 
+        +t
+            width: auto
+            margin: 0 0 48px
+        +m
+            margin: 0 -16px 32px
+    &__wrapper
+        flex: 0 0 calc(100% - 352px)
+        width: calc(100% - 352px)
+        padding: 80px 0 0 80px
+        +x
+            padding-left: 48px
+        +d
+            flex: 0 0 calc(100% - 300px)
+            width: calc(100% - 300px)
+            padding: 48px 0 0 32px
+        +t
+            width: 100%
+            padding: 0
+    &__container
+        margin-bottom: 104px
+        +m
+            margin-bottom: 64px
+    &__section
+        position: relative
+        +nl
+            margin-bottom: 64px
+    &__title
+        margin-bottom: 24px
+        +body-bold-1
+    &__content
+        margin-bottom: 24px
+        color: $n4
+    &__option
+        display: flex
+        align-items: flex-start
+        .host__text
+            font-weight: 500
+        &:not(:last-child)
+            margin-bottom: 20px
+    &__category
+        display: flex
+        align-items: center
+        flex-shrink: 0
+        width: 152px
+        padding-right: 24px
+        color: $n4
+        +m
+            width: 130px
+        .icon
+            width: 20px
+            height: 20px
+            margin-right: 12px
+            fill: $n4
+    &__text[href]
+        color: $p1
+        transition: color .2s
+        &:hover
+            color: darken($p1, 10)
+    .nav
+        margin-bottom: 32px
+    &__inner
+        margin: 0 -16px
+        +d
+            margin: 0 -8px
+    &__slider
+        position: static
+        visibility: hidden
+        +m
+            padding-bottom: 72px
+        &.slick-initialized
+            visibility: visible
+    .slick-list
+        overflow: visible
+        +s
+            margin: 0 -280px 0 0
+    .slick-slide
+        margin: 0 16px
+        opacity: 0
+        visibility: hidden
+        transition: all .4s
+        +d
+            margin: 0 8px
+        &.slick-active
+            opacity: 1
+            visibility: visible
+    .slick-arrow
+       top: 0
+       +m
+        top: auto
+        bottom: 0
+    .slick-prev
+        right: 48px
+        +m
+            right: auto
+            left: calc(50% - 44px)
+    .slick-next
+        right: 0
+        +m
+            right: calc(50% - 44px)
+

@@ -1,0 +1,114 @@
+.flights
+    .control
+        margin-bottom: 32px
+        padding: 0 
+    &__sorting
+        display: flex 
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 64px 
+        padding-top: 32px
+        border-top: 1px solid $n6
+        +m
+            display: block
+            margin-bottom: 32px 
+            padding-top: 0
+            border: none
+        +dark
+            border-color: $n3 
+        .flights__button
+            display: none
+            +m
+                display: flex
+                width: 100% 
+    .nav
+        +t
+            display: none     
+    &__select
+        flex-shrink: 0
+        width: 256px
+        +m
+            width: 100% 
+        +nl
+            +m
+                margin-bottom: 16px
+    &__row
+        display: flex
+        +m
+            display: block 
+    &__filters
+        flex-shrink: 0
+        width: 256px
+        +m
+            display: none
+            width: 100%
+            padding-bottom: 40px
+            &.show
+                display: block
+    &__box
+        padding-bottom: 48px
+        border-bottom: 1px solid $n6
+        +m
+            padding-bottom: 24px
+        +dark
+            border-color: $n3
+        &:not(:last-child)
+            margin-bottom: 48px
+            +m
+                margin-bottom: 24px
+    .range
+        &:not(:last-child)
+            margin-bottom: 32px
+            +m
+                margin-bottom: 24px
+    &__variants
+        display: flex
+        flex-direction: column
+        .checkbox
+            width: 100%
+            &:not(:last-child)
+                margin-bottom: 16px
+    &__reset
+        display: inline-flex
+        align-items: center
+        margin-top: 24px
+        +button-2
+        color: $n4
+        transition: color .2s
+        .icon
+            width: 24px
+            height: 24px
+            margin-right: 8px
+            fill: $n4
+            transition: fill .2s
+        &:hover
+            color: $n2
+            .icon
+                fill: $n2
+            +dark
+                color: $n6
+                .icon
+                    fill: $n6
+    &__container
+        flex-grow: 1
+        padding-left: 80px
+        +x
+            padding-left: 40px
+        +d
+            padding-left: 32px
+        +m
+            margin: 0 -16px
+            padding: 0
+    .flight
+        &:not(:last-child)
+            margin-bottom: 24px
+    &__btns
+        margin-top: 40px
+        text-align: center
+        +m
+            margin-top: 32px
+    &__btns &__button
+        .loader
+            margin: 0 20px 0 4px
+
+   

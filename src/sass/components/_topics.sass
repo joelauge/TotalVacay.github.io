@@ -1,0 +1,75 @@
+.topics
+    &__head
+        margin-bottom: 92px
+        text-align: center
+        +m
+            margin-bottom: 40px
+    .stage
+        margin-bottom: 8px
+    &__title
+        margin-bottom: 32px
+    &__wrapper
+        margin: 0 -16px
+        +m
+            margin: 0 -4px
+    &__item
+        padding: 64px 32px
+        border-radius: 20px
+        background: $n8
+        transition: box-shadow .2s
+        +m
+            padding: 64px 24px
+        +dark
+            background: $n2
+        &:hover
+            box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.1)
+    &__icon
+        display: flex
+        align-items: center
+        height: 48px
+        margin-bottom: 32px
+        +m
+            margin-bottom: 24px
+        img
+            max-height: 100%
+    &__subtitle
+        margin-bottom: 16px
+        +body-bold-2
+    &__content
+        color: $n4
+    &__slider
+        padding-bottom: 64px
+        visibility: hidden
+        &.slick-initialized
+            visibility: visible
+    .slick-list
+        overflow: visible
+    .slick-track
+        display: flex
+    .slick-slide
+        height: auto
+        margin: 0 12px
+        opacity: 0
+        visibility: hidden
+        transition: all .4s
+        +m
+            margin: 0 4px
+            opacity: 1
+            visibility: visible
+        &.slick-active
+            opacity: 1
+            visibility: visible
+    .slick-arrow
+        bottom: 0
+        width: 24px
+        height: 24px
+        &:hover
+            box-shadow: none
+            path
+                fill: $n2
+                +dark
+                    fill: $n8
+    .slick-prev
+        left: calc(50% - 34px)
+    .slick-next
+        right: calc(50% - 34px)

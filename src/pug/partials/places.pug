@@ -1,0 +1,25 @@
+div(class=classPlaces)
+	.places__center.center
+		.places__inner
+			.places__head
+				h2.places__title.h2=placesTitle 
+				.places__info.info=placesInfo
+			.places__wrapper
+				.places__slider.js-slider-places.js-slider-resize
+					mixin item(image, subtitle, time)
+						a.places__item(href="stays-product.html")
+							.status-gray.places__number 1480
+							.places__preview
+								img(src=image alt="Place")
+							.places__subtitle=subtitle
+							.places__time=time
+					+item("img/content/places-pic-1.jpg", "Thompsonbury", "15 minutes drive")
+					+item("img/content/places-pic-2.jpg", "Hudsontown", "28 minutes drive")
+					+item("img/content/places-pic-3.jpg", "Lake Marcelle", "35 minutes drive")
+					+item("img/content/places-pic-4.jpg", "New Keagan", "44 minutes drive")
+					+item("img/content/places-pic-5.jpg", "MacGyverton", "55 minutes drive")
+					+item("img/content/places-pic-6.jpg", "North Justen", "1 hours drive")
+					+item("img/content/places-pic-7.jpg", "Port Elyseberg", "2 hours drive")
+					+item("img/content/places-pic-8.jpg", "Danielmouth", "5 hours drive")
+					+item("img/content/places-pic-9.jpg", "Russelville", "8 hours drive")
+

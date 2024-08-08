@@ -1,0 +1,108 @@
+---
+title: Fleet
+classCars: active
+classPlanning: section-mb64 planning
+planningTitle: Rent a car in minutes with Fleet
+---
+extends layouts/layout
+block content
+	.section-mb80.main.main_cars
+		.main__center.center
+			.main__preview
+				picture
+					source(media="(max-width: 767px)" srcSet="img/content/main-pic-mobile-4.jpg")
+					img(src="img/content/main-pic-4.jpg" alt="Main")
+				.main__wrap
+					h1.main__title.hero Car rentals 
+					.main__info.info Find and book a great experience.
+					a.button.main__button(href="cars-category.html") Start your search
+			.panel.panel_cars
+				.panel__background
+				.panel__nav
+					a.panel__link(href="index.html") Stays
+					a.panel__link(href="flights.html") Flights
+					a.panel__link.active(href="cars.html") Cars
+					a.panel__link(href="things-to-do.html") Things to do
+				.panel__controls
+					button.button-stroke.button-small.panel__button.active Return to same location
+					button.button-stroke.button-small.panel__button Return to same different location
+				.panel__body
+					.panel__row
+						+location("", "marker", "Pickup location", "Where are you?")
+						+daterange("", "ddd, MMM DD", "calendar", "Check in", "Check out", "Add date", "Add date")
+						a.panel__search(href="cars-category.html")
+							+i('search')
+							span Search
+	.section.destinations
+		.destinations__center.center
+			.destinations__inner
+				.destinations__head
+					h2.destinations__title.h2 Popular destinations
+					.destinations__info.info for car rentals
+				.destinations__wrapper
+					.destinations__slider.js-slider-destinations
+						mixin destinationsItem(srcSet, src, status, classStatus, title, content)
+							a.destinations__item(href="cars-category.html")
+								.destinations__preview
+									img(srcSet=`${srcSet} 2x` src=src alt="City")
+									if status
+										div(class=classStatus)=status
+								.destinations__subtitle=title 
+								.destinations__content=content
+						+destinationsItem("img/content/city-pic-1@2x.jpg", "img/content/city-pic-1.jpg", "from $540 per day", "status-black destinations__category", "Paris", "Car rentals in 86 pickup locations")
+						+destinationsItem("img/content/city-pic-2@2x.jpg", "img/content/city-pic-2.jpg", false, "", "London", "Car rentals in 86 pickup locations")
+						+destinationsItem("img/content/city-pic-3@2x.jpg", "img/content/city-pic-3.jpg", "from $345 per day", "status-black destinations__category", "Amsterdam", "Car rentals in 86 pickup locations")
+						+destinationsItem("img/content/city-pic-4@2x.jpg", "img/content/city-pic-4.jpg", "from $123 per day", "status-black destinations__category", "Milan", "Car rentals in 86 pickup locations")
+						+destinationsItem("img/content/city-pic-1@2x.jpg", "img/content/city-pic-1.jpg", "from $540 per day", "status-black destinations__category", "Paris", "Car rentals in 86 pickup locations")
+						+destinationsItem("img/content/city-pic-2@2x.jpg", "img/content/city-pic-2.jpg", false, "", "London", "Car rentals in 86 pickup locations")
+						+destinationsItem("img/content/city-pic-3@2x.jpg", "img/content/city-pic-3.jpg", "from $345 per day", "status-black destinations__category", "Amsterdam", "Car rentals in 86 pickup locations")
+				button.button-stroke.destinations__button
+					span Show more
+					+i('arrow-right')
+	include partials/planning
+	.section.destinations
+		.destinations__center.center
+			.destinations__head
+				h2.destinations__title.h2 Popular destinations
+				.destinations__info.info for car rentals
+			.destinations__list
+				+destinationsItem("img/content/city-pic-1@2x.jpg", "img/content/city-pic-1.jpg", "from $540 per day", "status-black destinations__category", "Paris", "Car rentals in 86 pickup locations")
+				+destinationsItem("img/content/city-pic-2@2x.jpg", "img/content/city-pic-2.jpg", false, "", "London", "Car rentals in 86 pickup locations")
+				+destinationsItem("img/content/city-pic-3@2x.jpg", "img/content/city-pic-3.jpg", "from $345 per day", "status-black destinations__category", "Amsterdam", "Car rentals in 86 pickup locations")
+				+destinationsItem("img/content/city-pic-4@2x.jpg", "img/content/city-pic-4.jpg", "from $123 per day", "status-black destinations__category", "Milan", "Car rentals in 86 pickup locations")
+				+destinationsItem("img/content/city-pic-1@2x.jpg", "img/content/city-pic-1.jpg", "from $540 per day", "status-black destinations__category", "Paris", "Car rentals in 86 pickup locations")
+				+destinationsItem("img/content/city-pic-2@2x.jpg", "img/content/city-pic-2.jpg", false, "", "London", "Car rentals in 86 pickup locations")
+				+destinationsItem("img/content/city-pic-3@2x.jpg", "img/content/city-pic-3.jpg", "from $345 per day", "status-black destinations__category", "Amsterdam", "Car rentals in 86 pickup locations")
+				+destinationsItem("img/content/city-pic-4@2x.jpg", "img/content/city-pic-4.jpg", "from $123 per day", "status-black destinations__category", "Milan", "Car rentals in 86 pickup locations")
+				+destinationsItem("img/content/city-pic-1@2x.jpg", "img/content/city-pic-1.jpg", "from $540 per day", "status-black destinations__category", "Paris", "Car rentals in 86 pickup locations")
+			button.button-stroke.destinations__button
+				span Show more
+				+i('arrow-right')
+	include partials/services
+	include partials/brands
+	include partials/faq1
+	.section.categories
+		.categories__center.center
+			.categories__inner
+				.categories__head
+					h2.categories__title.h2 Recommended pickup locations
+					.categories__info.info A lot of amazing experiences 🏝
+				.categories__wrapper
+					.categories__slider.js-slider-categories
+						mixin item(url, counter, icon, subtitle, content)
+							a.categories__item(href=url)
+								.status.categories__counter=counter
+								.categories__icon
+									+i(icon)
+								.categories__subtitle=subtitle 
+								.categories__content=content
+						+item("cars-category-2.html", "256", "car", "South Virgilland", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "33", "car", "Purdyhaven", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "123", "car", "Port Jarrett", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "43", "car", "New Kristian", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "73", "car", "Demetrisfort", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "11", "car", "South Virgilland", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "56", "car", "Purdyhaven", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "33", "car", "Port Jarrett", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "123", "car", "New Kristian", "From Rs. 1,461 per day")
+						+item("cars-category-2.html", "43", "car", "Demetrisfort", "From Rs. 1,461 per day")

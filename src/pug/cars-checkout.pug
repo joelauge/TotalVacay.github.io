@@ -1,0 +1,138 @@
+---
+title: Fleet
+classHeader: header_border
+classCars: active
+---
+extends layouts/layout
+block content
+	.section-mb80.checkout.checkout_cars
+		.checkout__center.center
+			.control
+				a.button-stroke.button-small.control__button(href="stays-product.html")
+					+i('arrow-left')
+					span Go home
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="stays-product.html") Spectacular views of Queenstown
+					li.breadcrumbs__item Confirm and pay
+			.checkout__wrapper
+				.checkout__inner.js-tabs
+					h2.checkout__title.h2 Confirm and pay
+					.checkout__list
+						.checkout__section
+							.checkout__box
+								.checkout__category BMW i1 – 2021
+								.checkout__data
+									.checkout__el
+										.checkout__datepicker
+											.checkout__label Dates
+											input.checkout__input.js-date-single(data-format="MMM DD" data-single="false" data-container=".checkout__datepicker" type="text" readonly value="Aug 15 - Aug 22")
+											.checkout__controls
+												button.checkout__edit.js-date-open
+													+i('edit')
+												button.checkout__edit.js-date-close
+													+i('edit')
+							.checkout__box
+								.checkout__top
+									.checkout__category Pay with
+									.nav
+										a.nav__link.js-tabs-link(href="#") Credit Card
+										a.nav__link.js-tabs-link(href="#") Paypal
+								.field
+									.field__label saved contact info
+									.field__wrap
+										select.select
+											option tam@ui8.net
+											option vova@ui8.net
+											option john@ui8.net
+						.checkout__section
+							form.checkout__item.js-tabs-item
+								.checkout__line
+									.checkout__subtitle Credit Card
+									.checkout__cards
+										.checkout__card
+											img(src="img/content/visa.svg" alt="Visa")
+										.checkout__card
+											img(src="img/content/master-card.svg" alt="Master Card")
+								.checkout__fieldset
+									.field
+										.field__label card number
+										.field__wrap
+											input.field__input(type="tel" name="card" placeholder="XXXX XXXX XXXX XXXX" required)
+									.field
+										.field__label card holder
+										.field__wrap
+											input.field__input(type="text" name="holder" placeholder="TRAN MAU TRI TAM" required)
+									.checkout__row
+										.field
+											.field__label EXPIRATION DATE
+											.field__wrap
+												input.field__input(type="tel" name="date" placeholder="MM / YY" required)
+										.field
+											.field__label CVC
+											.field__wrap
+												input.field__input(type="tel" name="cvc" placeholder="CVC" required)
+								+checkbox("Save Card", true)
+								.checkout__message
+									.checkout__category Message the host
+									.field
+										.field__wrap
+											textarea.field__textarea(name="message" placeholder="I will be late about 1 hour, please wait..." required)
+								a.button.checkout__button(href="stays-checkout-complete.html") Confirm and pay
+							form.checkout__item.js-tabs-item
+								.checkout__line
+									.checkout__subtitle PayPal
+									.checkout__logo
+										img(src="img/content/paypal.svg" alt="PayPal")
+								.checkout__fieldset
+									.field
+										.field__label email or phone number
+										.field__wrap
+											input.field__input(type="text" name="login" required)
+									.field
+										.field__label Password
+										.field__wrap
+											input.field__input(type="password" name="password" required)
+								.checkout__control
+									a.button.checkout__button(href="stays-checkout-complete.html") Confirm and pay
+									.checkout__verified
+										img(src="img/content/paypal-verified.png" alt="PayPal")
+								+checkbox("Save Paypal Account", true)
+				.price
+					.price__top
+						.price__photo
+							img(src="img/content/bmw.jpg" alt="Price")
+						.price__title BMW i1 – 2021
+						.price__author
+							.price__text Car owner
+							.price__avatar
+								img(src="img/content/avatar.jpg" alt="Avatar")
+							.price__man Zoe Towne
+					.price__description
+						.price__item
+							.price__icon
+								+i('calendar')
+							.price__box
+								.price__category Date
+								.price__subtitle Aug 15, 2021 - Aug 22, 2021
+					.price__body
+						.price__stage Price details
+						.price__table
+							.price__row
+								.price__cell $500 x 3 days
+								.price__cell $1500
+							.price__row
+								.price__cell 10% campaign discount
+								.price__cell -$150
+							.price__row
+								.price__cell 1 child seat
+								.price__cell $50
+							.price__row
+								.price__cell Service fee
+								.price__cell $110
+							.price__row
+								.price__cell Total (USD)
+								.price__cell $1460
+					.price__note
+						+i('coin')
+						| Free cancellation until 3:00 PM on May 15, 2021

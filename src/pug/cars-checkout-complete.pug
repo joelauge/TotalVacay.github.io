@@ -1,0 +1,83 @@
+---
+title: Fleet
+classHeader: header_border
+classCars: active
+---
+extends layouts/layout
+block content
+	.section-mb80.complete
+		.complete__center.center
+			.control
+				a.button-stroke.button-small.control__button(href="cars-checkout.html")
+					+i('arrow-left')
+					span Go home
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="cars-product.html") Home
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="cars-checkout.html") Confirm and pay
+					li.breadcrumbs__item Congrats
+			.complete__row
+				.complete__col
+					.complete__wrapper
+						.complete__slider.js-slider-complete
+							.complete__preview
+								img(srcSet="img/content/slider-pic-2@2x.jpg 2x" src="img/content/slider-pic-2.jpg" alt="Complete")
+							.complete__preview
+								img(srcSet="img/content/slider-pic-2@2x.jpg 2x" src="img/content/slider-pic-2.jpg" alt="Complete")
+							.complete__preview
+								img(srcSet="img/content/slider-pic-2@2x.jpg 2x" src="img/content/slider-pic-2.jpg" alt="Complete")
+				.complete__col
+					.complete__head
+						h2.complete__title.h2 Congratulation!
+						.complete__info You trip has been booked! 🎉
+						.complete__subtitle Spectacular views of Queenstown
+						.complete__author
+							span Car owner
+							.complete__avatar
+								img(src="img/content/avatar.jpg" alt="Avatar")
+							.complete__man Zoe Towne
+					.complete__line
+						.complete__rating
+							+i('star')
+							.complete__number 4.8
+							.complete__reviews (256 reviews)
+						.complete__parameters
+							.complete__parameter 1 bedroom
+							.complete__parameter 1 private bath
+					.complete__list
+						.complete__item
+							.complete__details
+								.complete__category Dates
+								.complete__value May 15 - 22, 2021
+						.complete__item
+							.complete__details
+								.complete__category Guests
+								.complete__value 2 guest
+					.complete__stage Booking details
+					.complete__table
+						.complete__flex
+							.complete__cell
+								+i('hand-cart')
+								| Booking code:
+							.complete__cell UI8_150989
+						.complete__flex
+							.complete__cell
+								+i('calendar')
+								| Date:
+							.complete__cell 30 Apr, 2021
+						.complete__flex
+							.complete__cell
+								+i('receipt')
+								| Total:
+							.complete__cell $833
+						.complete__flex
+							.complete__cell
+								+i('wallet')
+								| Payment method:
+							.complete__cell Credit card
+					.complete__btns
+						a.button-stroke.complete__button(href="your-trips.html") Your trips
+						a.button.complete__button(href="things-to-do.html") Explore things to do
+
+				

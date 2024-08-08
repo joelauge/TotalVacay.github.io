@@ -1,0 +1,31 @@
+---
+title: Fleet
+classWishlists: active
+classHeader: header_border
+classPlaces: section-mb80 places
+placesTitle: Explore nearby
+placesInfo: 10,789 beautiful places to go
+---
+extends layouts/layout
+block content
+	.section.wishlists.js-tabs
+		.wishlists__center.center
+			.control
+				a.button-stroke.button-small.control__button(href="index.html")
+					+i('arrow-left')
+					span Go home
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Home
+					li.breadcrumbs__item Your trips
+			h2.wishlists__title.h2 Your trips
+			.wishlists__wrap
+				+card("stays-product.html", "img/content/card-pic-1@2x.jpg", "img/content/card-pic-1.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$356", "$267", "modem", "Free wifi", "burger", "Breakfast included", "$200 total", "4.8", "12")
+				+card("stays-product.html", "img/content/card-pic-2@2x.jpg", "img/content/card-pic-2.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$234", "$123", "modem", "Free wifi", "burger", "Breakfast included", "$123 total", "4.9", "15")
+				+card("stays-product.html", "img/content/card-pic-3@2x.jpg", "img/content/card-pic-3.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$456", "$401", "modem", "Free wifi", "burger", "Breakfast included", "$456 total", "4.8", "125")
+				+card("stays-product.html", "img/content/card-pic-4@2x.jpg", "img/content/card-pic-4.jpg", "category card__category", "superhost", "Entire serviced classy moutain house", "$111", "$97", "modem", "Free wifi", "burger", "Breakfast included", "$222 total", "5.0", "52")
+			.wishlists__btns
+				button.button-stroke.wishlists__button
+					+loader
+					span Show more
+	include partials/newsletter

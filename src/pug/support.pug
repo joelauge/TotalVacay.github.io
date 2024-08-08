@@ -1,0 +1,67 @@
+---
+title: Fleet
+liveTitle: Awesome desitinations
+classSupport: active
+---
+extends layouts/layout
+block content
+	.support
+		.support__center.center
+			.support__gallery
+				.support__preview
+					img.some-icon.js-parallax(data-scale="1.5" data-orientation="up" srcSet="img/content/support-pic-1@2x.png 2x" src="img/content/support-pic-1.png" alt="Support")
+					img.some-icon-dark.js-parallax(data-scale="1.5" data-orientation="up" srcSet="img/content/support-pic-dark-1@2x.png 2x" src="img/content/support-pic-dark-1.png" alt="Support")
+				.support__preview
+					img.some-icon.js-parallax(data-scale="1.5" data-orientation="right" srcSet="img/content/support-pic-2@2x.png 2x" src="img/content/support-pic-2.png" alt="Support")
+					img.some-icon-dark.js-parallax(data-scale="1.5" data-orientation="right" srcSet="img/content/support-pic-dark-2@2x.png 2x" src="img/content/support-pic-dark-2.png" alt="Support")
+				.support__preview
+					img.some-icon.js-parallax(data-scale="1.5" data-orientation="down" srcSet="img/content/support-pic-3@2x.png 2x" src="img/content/support-pic-3.png" alt="Support")
+					img.some-icon-dark.js-parallax(data-scale="1.5" data-orientation="down" srcSet="img/content/support-pic-dark-3@2x.png 2x" src="img/content/support-pic-dark-3.png" alt="Support")
+				.support__preview
+					img.some-icon.js-parallax(data-scale="1.5" data-orientation="left" srcSet="img/content/support-pic-4@2x.png 2x" src="img/content/support-pic-4.png" alt="Support")
+					img.some-icon-dark.js-parallax(data-scale="1.5" data-orientation="left" srcSet="img/content/support-pic-dark-4@2x.png 2x" src="img/content/support-pic-dark-4.png" alt="Support")
+			h1.support__title.hero Support
+			.support__info Stacks is a production-ready library of stackable content blocks built in React Native.
+			+subscription("text", "search", "Search anythingl", "search", "subscription_big")
+	.section-pd.section-bg.topics
+		.topics__center.center
+			.topics__head
+				.stage A creative agency that lead and inspire
+				h2.topics__title.h2 Popular topics
+				a.button.topics__button(href="messages.html") Send message
+			.topics__wrapper
+				.topics__slider.js-slider-topics
+					.topics__item
+						.topics__icon
+							img(src="img/content/folder-green.svg" alt="")
+						.topics__subtitle Refund timelines
+						.topics__content We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.
+					.topics__item
+						.topics__icon
+							img(src="img/content/mouse.svg" alt="")
+						.topics__subtitle Coronavirus disease
+						.topics__content We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.
+					.topics__item
+						.topics__icon
+							img(src="img/content/folder-blue.svg" alt="")
+						.topics__subtitle Use a Fleet coupon
+						.topics__content We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.
+					.topics__item
+						.topics__icon
+							img(src="img/content/folder-green.svg" alt="")
+						.topics__subtitle Refund timelines
+						.topics__content We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.
+					.topics__item
+						.topics__icon
+							img(src="img/content/mouse.svg" alt="")
+						.topics__subtitle Coronavirus disease
+						.topics__content We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.
+					.topics__item
+						.topics__icon
+							img(src="img/content/folder-blue.svg" alt="")
+						.topics__subtitle Use a Fleet coupon
+						.topics__content We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.
+	include partials/faq
+	include partials/live
+
+

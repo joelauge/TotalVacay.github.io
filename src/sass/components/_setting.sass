@@ -1,0 +1,222 @@
+.setting
+    padding-top: 80px
+    +d
+        padding-top: 64px
+    +m
+        padding-top: 32px
+    &__center
+        display: flex
+        align-items: flex-start
+        +t
+            display: block
+    .select
+        +t
+            margin-bottom: 48px
+        +m
+            margin-bottom: 32px
+    &__menu
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        flex-shrink: 0
+        width: 256px
+        padding: 48px
+        border-radius: 16px
+        box-shadow: 0px 32px 32px -12px rgba(15, 15, 15, 0.08)
+        +t
+            display: none
+        +dark
+            background: $n2
+    &__link
+        display: flex   
+        align-items: center
+        +button-2
+        color: $n4
+        transition: color .2s
+        .icon
+            width: 16px
+            height: 16px
+            margin-right: 16px
+            fill: $n4
+        &:hover,
+        &.active
+            color: $n2
+            .icon
+                fill: $n2
+            +dark
+                color: $n8
+                .icon
+                    fill: $n8
+        &:not(:last-child)
+            margin-bottom: 40px
+    &__container
+        padding-left: 128px
+        flex-grow: 1
+        +x
+            padding-left: 64px
+        +d
+            padding-left: 32px
+        +t
+            padding-left: 0
+    &__head
+        display: flex
+        align-items: center
+        margin-bottom: 64px
+        +m
+            margin-bottom: 32px
+        .setting__button
+            flex-shrink: 0
+            margin-left: 16px
+            +dark
+                box-shadow: inset 0 0 0 2px $n3
+    &__head &__title
+        margin-right: auto
+        +m
+            font-size: 32px
+    &__item > &__title
+        margin-bottom: 64px
+        +m
+            margin-bottom: 32px
+            font-size: 32px
+    &__item
+        display: none
+    &__section
+        &:not(:last-child)
+            margin-bottom: 48px
+    &__category
+        margin-bottom: 32px
+        +body-bold-2
+    &__fieldset
+        & > .field
+            &:not(:last-child)
+                margin-bottom: 32px
+    &__row
+        display: flex
+        margin: 0 -10px
+        +m
+            display: block
+            margin: 0
+        .field
+            flex: 0 0 calc(50% - 20px)
+            width: calc(50% - 20px)
+            margin: 0 10px
+            +m
+                width: 100%
+                margin: 0
+            &:not(:last-child)
+                +m
+                    margin-bottom: 20px
+        &:not(:last-child)
+            margin-bottom: 32px
+    &__controls
+        display: flex
+        align-items: center
+        margin-top: 48px
+        padding-top: 48px
+        border-top: 1px solid $n6
+        +dark
+            border-color: $n3
+        .setting__button
+            margin-right: 40px
+    &__clear
+        display: flex
+        align-items: center
+        +button-1
+        color: $n4
+        transition: color .2s
+        .icon
+            width: 16px
+            height: 16px
+            margin-right: 12px
+            fill: $n4
+            transition: fill .2s
+        &:hover
+            color: $p1
+            .icon
+                fill: $p1
+    &__box
+        &:not(:last-child)
+            margin-bottom: 64px
+            padding-bottom: 64px
+            border-bottom: 1px solid $n6
+            +m
+                margin-bottom: 32px
+                padding-bottom: 32px
+            +dark
+                border-color: $n3
+    &__stage
+        margin-bottom: 16px
+        +body-bold-1
+    &__line
+        display: flex
+        margin: 0 -48px
+        +m
+            display: block
+            margin: 0
+        .setting__element
+            flex: 0 0 50%
+            padding: 0 48px
+            +m
+                padding: 0
+            &:first-child
+                border-right: 1px solid $n6
+                +m
+                    margin-bottom: 16px
+                    border: none
+                +dark
+                    border-color: $n3
+    &__group &__element
+        &:not(:last-child)
+            margin-bottom: 20px
+            padding-bottom: 20px
+            border-bottom: 1px solid $n6
+            +dark
+                border-color: $n3
+    &__element
+        display: flex
+        align-items: center
+        +m
+            align-items: flex-start
+    &__details
+        flex-grow: 1
+    &__label
+        margin-bottom: 4px
+        font-weight: 500
+    &__text
+        +caption-2
+        color: $n4
+    &__element &__button
+        flex-shrink: 0
+        margin-left: 12px
+        +dark
+            box-shadow: inset 0 0 0 2px $n3
+    &__top
+        display: flex
+        align-items: center
+        margin: 32px 0 
+    &__top &__category
+        margin: 0 auto 0 0 
+    &__cards
+        display: flex
+        align-items: center
+    &__notification
+        &:not(:last-child)
+            margin-bottom: 24px
+            padding-bottom: 24px
+            border-bottom: 1px solid $n6
+            +dark
+                border-color: $n3
+    &__main
+        display: flex
+        margin-bottom: 4px
+    &__subtitle
+        margin-right: auto
+        +body-bold-2
+    .switch
+        flex-shrink: 0
+        margin-left: 24px
+    &__content
+        +caption-2
+        color: $n4
+
+                
