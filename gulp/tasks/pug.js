@@ -14,7 +14,7 @@ module.exports = function () {
             }))
             .pipe(plumber.stop())
             .pipe(cached('pug'))
-            .pipe($.gulp.dest('./build/'))
+            .pipe($.gulp.dest('./'))
             .on('end', $.browserSync.reload);
     });
 };

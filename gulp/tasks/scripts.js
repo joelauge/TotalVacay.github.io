@@ -3,7 +3,7 @@ const uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
     scriptsPATH = {
         "input": "./src/js/",
-        "output": "./build/js/"
+        "output": "./js/"
     };
 
 module.exports = function () {
