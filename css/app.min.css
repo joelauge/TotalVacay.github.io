@@ -2416,7 +2416,7 @@ body.dark .some-icon {
   font-weight: 700; }
 
 .hero {
-  font-size: 96px;
+  font-size: 70px;
   line-height: 1;
   letter-spacing: -.02em; }
   @media only screen and (max-width: 1339px) {
@@ -3000,7 +3000,7 @@ body.dark .some-icon {
     color: #B1B5C3; }
   .header__title {
     margin-bottom: 16px;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.33333;
     font-weight: 600;
     letter-spacing: -.01em; }
